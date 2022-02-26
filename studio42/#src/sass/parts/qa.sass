@@ -1,0 +1,33 @@
+section.qa
+
+  h2
+    margin-bottom: 70px
+    @media (max-width: 1350px)
+      margin-bottom: 50px
+
+  .qa__list
+    &-item
+      padding: 26px 0
+      border-bottom: 1px solid var(--orange-05)
+
+      .qa__item-question
+        font-weight: 600
+        font-size: 16px
+        cursor: pointer
+        position: relative
+        padding-right: 35px
+        &::before
+          @include ba()
+          width: 30px
+          height: 14px
+          background: center / contain no-repeat url('../img/arrow.svg')
+          right: 0
+          top: calc(50% - 6px)
+          transition: transform .3s ease
+
+        &.active
+          &::before
+            transform: rotate(-180deg)
+
+      .qa__item-answer
+        margin-top: 24px

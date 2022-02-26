@@ -1,0 +1,198 @@
+section.prices
+  padding-bottom: 0
+
+  .prices-title
+    margin-bottom: 25px
+    font-size: 42px
+    font-weight: 700
+    text-align: center
+    text-transform: uppercase
+    color: var(--blue-middle)
+    @media (max-width: 550px)
+      font-size: 26px
+
+  .timer-wrapper
+    position: relative
+    z-index: 1
+    &::before
+      @include ba()
+      top: 0
+      width: var(--timer-line-width)
+      left: calc(50% - var(--timer-line-width) / 2)
+      height: 77px
+      background: center / contain no-repeat url('../img/timer-line.png')
+      --timer-line-width: 100%
+      z-index: -1
+  .timer
+    margin: 0 auto
+    padding: 10px 0
+    max-width: 500px
+    border-radius: 30px
+    color: var(--white)
+    font-size: 26px
+    text-align: center
+    text-transform: uppercase
+    background-color: var(--blue-middle)
+    display: flex
+    align-items: flex-end
+    justify-content: center
+    @media (max-width: 1060px)
+      max-width: 400px
+      border-radius: 15px
+      span
+        display: block
+    @media (max-width: 550px)
+      font-size: 20px
+      width: 280px
+    span
+      font-size: 1.2em
+      width: 120px
+      margin-left: 5px
+
+  .tariffs-list
+    margin-top: 45px
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    justify-content: space-between
+    @media (max-width: 1060px)
+      justify-content: space-around
+
+    &-item
+      width: 300px
+      display: flex
+      flex-wrap: wrap
+      align-items: center
+      flex-direction: column
+      text-align: center
+      border-radius: 30px
+      border: 1.5px solid var(--border-color)
+      position: relative
+      margin-bottom: 70px
+      &,.add-to-card, .tariffs-list-item-header
+        transition: all .3s ease
+      &:hover, &:hover .add-to-card, &:hover .tariffs-list-item-header
+        box-shadow: 0px 3px 7px 1px #00000033
+
+      &:nth-child(1)
+        img
+          transform: translate(20px,0px)
+      &:nth-child(2)
+        .tariffs-list-item-header
+          background-position: center
+          img
+            transform: translate(20px, 12px)
+      &:nth-child(3)
+        .tariffs-list-item-header
+          background-position: right
+          img
+            transform: translate(0px,4.5px)
+      @media (max-width: 1060px)
+        margin: 0 15px 100px
+
+      &-header
+        margin-left: -2.5%
+        width: 105%
+        display: flex
+        align-items: flex-end
+        justify-content: center
+        border-radius: 30px
+        background: left center / cover no-repeat url('../img/present-bg.jpg')
+        img
+          width: 100%
+
+      &-body
+        padding: 30px 20px 20px
+        color: var(--blue-middle)
+        .tariff
+          text-transform: uppercase
+          font-size: 24px
+          margin-bottom: 10px
+          @media (max-width: 550px)
+            font-size: 22px
+            span
+              margin-top: 5px
+          span
+            margin-top: 10px
+            display: block
+            font-size: 14px
+        .price
+          margin-bottom: 25px
+          font-size: 48px
+          font-weight: 300
+          text-transform: uppercase
+          @media (max-width: 550px)
+            font-size: 42px
+        .more-list
+          text-align: left
+          text-transform: uppercase
+          @media (max-width: 550px)
+            font-size: 14px
+          &-item
+            position: relative
+            label
+              padding-right: 30px
+              display: flex
+              align-items: center
+              user-select: none
+              margin-bottom: 10px
+              justify-content: space-between
+              position: relative
+              cursor: pointer
+              &::before
+                position: absolute
+                right: 0
+                content: ''
+                display: inline-block
+                width: 20px
+                height: 20px
+                border: 1px solid #333
+                background-repeat: no-repeat
+                background-position: center center
+                background-size: center
+              &::after
+                content: ''
+                position: absolute
+                right: 0
+                display: inline-block
+                width: 7px
+                height: 15px
+                margin-right: 6px
+                margin-bottom: 3px
+                border: solid var(--blue-middle)
+                border-width: 0 3px 3px 0
+                transform: rotate( 45deg)
+                display: none
+            input
+              position: absolute
+              z-index: -1
+              opacity: 0
+              right: 0
+              &:disabled + label::before
+                opacity: .3
+              &:not(:disabled):checked + label::after
+                display: block
+
+      .add-to-card
+        width: 50px
+        height: 50px
+        display: flex
+        align-items: center
+        justify-content: center
+        border: none
+        cursor: pointer
+        border-radius: 50%
+        background: center / 60% no-repeat url('../img/cart.png') var(--blue-middle)
+        position: absolute
+        bottom: -40px
+        right: 15px
+
+      .arrow-bottom
+        width: var(--arrow-bottom-width)
+        height: var(--arrow-bottom-width)
+        border-radius: 50%
+        background: center / contain no-repeat url('../img/arrow-bottom.png')
+        position: absolute
+        bottom: -70px
+        right: calc(50% - var(--arrow-bottom-width) / 2)
+        --arrow-bottom-width: 50px

@@ -1,0 +1,94 @@
+mixin fp-item(title, img)
+  .form-previews__item
+    .form-previews__item-title!=title
+    .form-previews__item-img
+      img(src=img, alt="")
+
+
+section.constructor
+  .container 
+
+    h2 Онлайн конструктор
+
+
+    form#constructorForm
+      .form-container
+        .form-item#sel-1
+          .form-item__title К чему подключаем?
+            .help-icon 
+            .help-text Выберите к чему будет подключена система, диаметр и рабочее давление
+          select(name="output")#sel-output
+            option(disabled selected) Выберите выход
+            option(value="Отрезок трубы") Отрезок трубы
+            option(value="Фланец") Фланец
+          select(name="diameter").diameter#sel-diameter
+            option(disabled selected) Диаметр
+            option(value="50mm") 50 мм
+            option(value="65mm") 65 мм
+            option(value="80mm") 80 мм
+            option(value="100mm") 100 мм
+            option(value="125mm") 125 мм
+            option(value="150mm") 150 мм
+            option(value="200mm") 200 мм
+            option(value="250mm") 250 мм
+            option(value="300mm") 300 мм
+            option(value="350mm") 350 мм
+            option(value="400mm") 400 мм
+          .pressure-input
+            input(type="text" name="pressure" placeholder="Давление").pressure
+
+        .form-item.disabled-sel#sel-2
+          .form-item__title Соединение с источником
+            .help-icon 
+            .help-text Выберите соединение для подключения к источнику
+          select(name="connect-source").connect-source#sel-connectSource
+            option(disabled selected) Выберите соединение
+            option(value="адаптер cpt + cpt") Адаптер CPT #[br] + CPT
+            option(value="фланцевый адаптер cpt + cpt") Фланцевый адаптер CPT #[br] + CPT 
+            option(value="Фланцевое соединение") Фланцевое соединение
+
+        .form-item.disabled-sel#sel-3
+          .form-item__title Шланг
+            .help-icon 
+            .help-text Выберите диаметр шланга и укажите длину запрашиваемой трассы
+          select(name="diameter-hose")#sel-diameterHose
+            option(disabled selected) Диаметр шланга
+            option(value="50mm") 50 мм
+            option(value="65mm") 65 мм
+            option(value="80mm") 80 мм
+            option(value="100mm") 100 мм
+            option(value="125mm") 125 мм
+            option(value="150mm") 150 мм
+            option(value="200mm") 200 мм
+            option(value="250mm") 250 мм
+            option(value="300mm") 300 мм
+            option(value="350mm") 350 мм
+            option(value="400mm") 400 мм
+          .input-div
+            input(type="text" name="length" placeholder="Длина").length
+
+        .form-item.disabled-sel#sel-4
+          .form-item__title Соединение шлангов
+            .help-icon 
+            .help-text Выберите соединения для отрезков шлангов
+          select(name="connect-hose")#sel-connectHose
+            option(disabled selected) Выберите соединение
+            option(value="cpt PLVL") CPT PLVL
+            option(value="cpt PLV") CPT PLV
+            option(value="STORz") STORz
+            option(value="Bauer") Bauer
+            option(value="Camlock") Camlock
+            option(value="Соединение ремонтное") Соединение ремонтное
+        
+        button(type="button").reset#resetBtn Сбросить фильтр
+
+      .form-previews
+        +fp-item('Выберите соединение <br> с источником', '')
+        +fp-item('Выберите диаметр <br> шланга', '')
+        +fp-item('Выберите соединение <br> шлангов', '')
+  
+
+
+      .order
+        span.free-consultation Бесплатная техническая консультация!*
+        button.yellow-btn#send Заказать

@@ -1,0 +1,61 @@
+section.our-partners
+  overflow: hidden
+  padding-top: 0
+
+  .our-partners__list
+    &-container
+      max-height: 500px
+      display: flex
+      flex-wrap: wrap
+      align-items: center
+      flex-direction: column
+      justify-content: space-between
+      @media (max-width: 340px)
+        max-height: 210px
+
+    &-item
+      margin-bottom: 48px
+      margin-right: 54px
+      min-width: 15%
+      height: 200px
+      animation-name: partnersCarousel-2400
+      animation-duration: 20s
+      animation-iteration-count: infinite
+      animation-direction: alternate
+      animation-timing-function: linear
+      animation-delay: 3s
+      @media (max-width: 767px)
+        animation-name: partnersCarousel-1000
+        margin-bottom: 24px
+        margin-right: 24px
+        min-width: 30%
+        height: 180px
+      @media (max-width: 340px)
+        animation-name: partnersCarousel-276
+        animation-duration: 12s
+        margin-bottom: 12px
+        margin-right: 12px
+        height: 90px
+        img
+          height: 100%
+
+@keyframes partnersCarousel-2400
+  0%
+    transform: translateX(0)
+
+  100%
+    transform: translateX(-2400px)
+
+@keyframes partnersCarousel-1000
+  0%
+    transform: translateX(0)
+
+  100%
+    transform: translateX(-1000px)
+
+@keyframes partnersCarousel-276
+  0%
+    transform: translateX(0)
+
+  100%
+    transform: translateX(-276px)

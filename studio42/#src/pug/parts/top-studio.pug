@@ -1,0 +1,23 @@
+mixin top-studio__item(img, text)
+  .top-studio__list-item
+    .top-studio__item-text=text
+    .top-studio__item-img
+      img(src=img, alt="")
+
+section.top-studio#top-studio
+  .container 
+    h2 с 2019 года входим в топ-10 веб-студий #[br] г. кемерово согласно рейтингу рунета
+
+    .top-studio__list
+
+      +top-studio__item('img/ts-1.png', 'С 2019 года входим в топ 10 веб-студий ')
+      +top-studio__item('img/ts-2.jpg', 'Являемся сертифицироваными партнерами платформы InSales')
+      +top-studio__item('img/ts-3.png', 'Имеем 5 звезд по отзывам на сайте платформы InSales')
+
+      .top-studio__list-item
+        .top-studio__item-text Входим в топ 50 и топ 100 в разных тематиках
+        .top-studio__item-img
+          img(src="img/ts-4.1.jpg", alt="")
+          img(src="img/ts-4.2.jpg", alt="")
+          img(src="img/ts-4.3.jpg", alt="")
+          img(src="img/ts-4.4.jpg", alt="")

@@ -1,0 +1,289 @@
+*, *::before, *::after
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+html
+  scroll-behavior: smooth
+body
+  font-family: "Mont", Arial, sans-serif
+  color: var(--text-color)
+
+.container
+  margin: 0 auto
+  max-width: 1600px
+  @media (max-width: 1620px)
+    max-width: 1400px
+  @media (max-width: 1420px)
+    max-width: 1200px
+  @media (max-width: 1220px)
+    max-width: 992px
+  @media (max-width: 1000px)
+    max-width: 90%
+
+section
+  padding: 50px 0
+  @media (max-width: 767px)
+    padding: 50px 0
+
+ul
+  list-style: none
+
+img
+  max-width: 100%
+
+a
+  color: #333
+  text-decoration: none
+
+.red-text
+  color: #E23A63 !important
+.green-text
+  color: #428941 !important
+.blue-text
+  color: #2970C2 !important
+.yellow-text
+  color: #FFC83C !important
+
+h2
+  font-size: 45px
+  font-weight: 700
+  line-height: 130%
+  letter-spacing: 0.01em
+  text-transform: uppercase
+  color: var(--text-color)
+  margin-bottom: 60px
+  @media (max-width: 767px)
+    font-size: 28px
+    text-align: center
+    margin-bottom: 30px
+
+.desc
+  font-size: 20px
+  font-weight: 700
+  line-height: 130%
+  letter-spacing: 0.01em
+  color: var(--text-color)
+  @media (max-width: 767px)
+    font-size: 16px
+
+.yellow-block
+  padding: 5px 25px
+  display: inline-block
+  color: var(--text-color)
+  font-size: 22px
+  font-weight: 700
+  line-height: 58px
+  letter-spacing: 0.01em
+  background: var(--accent-yellow)
+  @media (max-width: 767px)
+    width: 100%
+    font-size: 18px
+    padding: 5px 15px
+
+.yellow-btn
+  width: 225px
+  height: 60px
+  border: none
+  cursor: pointer
+  font-size: 20px
+  color: var(--text-color)
+  transition: var(--trans-2s)
+  background: var(--accent-yellow)
+  opacity: 1
+  outline: none
+  display: flex
+  align-items: center
+  justify-content: center
+  border-radius: 2px
+  &:hover
+    opacity: .8
+
+.alert-message
+  padding: 20px 12px 20px 46px
+  width: 240px
+  font-size: 14px
+  background: #fbfbfb
+  box-shadow: 0 0 2px rgba(0,0,0,.3)
+  transition: var(--trans-2s)
+  position: absolute
+  right: -30px
+  top: -75px
+  opacity: 0
+  visibility: hidden
+  z-index: 6
+  &::before
+    @include ba()
+    width: 26px
+    height: 26px
+    display: inline-block
+    background: center / contain no-repeat url('../img/warning-err.svg')
+    top: calc(50% - 13px)
+    left: 12px
+
+.yellow-check li
+  margin-bottom: 10px
+  color: var(--accent-yellow)
+  font-size: 18px
+  font-weight: 600
+  line-height: 130%
+  position: relative
+  padding-left: 26px
+  &::before
+    content: ''
+    margin-right: 21px
+    display: inline-block
+    width: 14px
+    height: 14px
+    background: center / contain no-repeat url('../img/li-check.svg')
+    position: absolute
+    left: 0
+    top: calc(50% - 7px)
+
+  @media (max-width: 1420px)
+    font-size: 16px
+  @media (max-width: 767px)
+    font-size: 12px
+
+.h1-title
+  display: flex
+  align-items: center
+  flex-direction: column
+  margin-bottom: 74px
+
+  &.red-line
+    h1::before, h1::after
+      background-color: #E23A63
+  &.green-line
+    h1::before, h1::after
+      background-color: #428941
+  &.blue-line
+    h1::before, h1::after
+      background-color: #2970C2
+  &.yellow-line
+    h1::before, h1::after
+      background-color: #FFC83C
+
+  h1
+    padding: 0 92px
+    // padding: 0 10px
+    color: #4C4C4C
+    font-size: 45px
+    line-height: 130%
+    text-align: center
+    text-transform: uppercase
+    position: relative
+    background: #fff
+    @media (max-width: 1420px)
+      font-size: 36px
+    @media (max-width: 767px)
+      font-size: 26px
+      padding: 0
+      &::before, &::after
+        display: none
+
+    &::before, &::after
+      @include ba()
+      width: 72px
+      height: 6px
+      background: #2970C2
+      top: calc(50% - 3px)
+    &::before
+      left: 0px
+    &::after
+      right: 0px
+
+  p
+    font-size: 16px
+    line-height: 130%
+    text-align: center
+    @media (max-width: 767px)
+      font-size: 14px
+
+.breadcrumbs
+  margin-bottom: 12px
+  color: #919191
+  font-size: 16px
+  line-height: 20px
+  text-transform: uppercase
+  background: #fff
+  display: inline-block
+  padding-right: 10px
+  @media (max-width: 767px)
+    font-size: 12px
+
+  a
+    color: var(--text-color)
+    transition: var(--trans-2s)
+    &:hover
+      opacity: .8
+
+.fixed-btn
+  width: 220px
+  height: 190px
+  background: center / contain no-repeat url('../img/Btn.png')
+  position: fixed
+  bottom: 100px
+  right: 100px
+  animation-name: fixed-btn
+  animation-duration: 5s
+  animation-iteration-count: infinite
+  animation-timing-function: ease
+  animation-direction: alternate-reverse
+  z-index: 10
+  @media (max-width: 1420px)
+    width: 130px
+    height: 130px
+    bottom: 5%
+    right: 3%
+
+.yellow-lines
+  position: relative
+  @media (max-width: 1420px)
+    padding: 50px 0
+  @media (max-width: 767px)
+    &::before
+      display: none
+
+  &::before
+    @include ba()
+    width: 60%
+    height: 700px
+    background: center / cover no-repeat url('../img/pattern.svg')
+    z-index: -1
+    right: 0
+    top: 0
+
+.hose-block
+  display: flex
+  align-items: center
+  justify-content: flex-end
+  @media (max-width: 767px)
+    display: none
+
+.hose-mobile
+  display: none
+  @media (max-width: 767px)
+    display: block
+
+  .hose-sys__list-item
+    margin-bottom: 24px
+    z-index: 3
+
+    .hose-sys__item-title
+      font-size: 16px
+      font-weight: 700
+      letter-spacing: 0.01em
+      margin-bottom: 14px
+    .hose-sys__item-desc
+      color: #8F8F8F
+      font-weight: 400
+      font-size: 14px
+      line-height: 130%
+      letter-spacing: 0.01em
+
+@keyframes fixed-btn
+  0%
+    transform: scale(.1)
+  100%
+    transform: scale(1)

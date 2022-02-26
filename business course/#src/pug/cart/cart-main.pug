@@ -1,0 +1,59 @@
+section.cart-main 
+  .container
+    .cart-title Корзина
+
+    .cart-list
+      .cart-list-item
+        .cart-list-item-detail
+          .name Как запустить свой бизнес с 0 пакет #[span “LIVE”]
+          .price 4.900Р
+        button.btn-close X
+
+      .cart-list-item
+        .cart-list-item-detail
+          .name Сопровождение куратора
+          .price 1.000Р
+        button.btn-close X
+
+    .common
+      button.add-more + добавить курс или куратора
+      .common-price Итого: #[span#common-price-count 5.900р]
+
+    form
+      .contacts
+        .contacts-title Контактные данные
+        .contacts-wrapper
+          .inputs
+            input(type="text" placeholder="Фамилия Имя" required)
+            input(type="text" placeholder="Телефон" required)
+            input(type="text" placeholder="Instagram")
+            input(type="email" placeholder="E-mail" required)
+          
+          label(for="new-user").new-user
+            input(type="checkbox" id="new-user")
+            .check
+    
+      .pay-methods
+        .pay-methods-title Способ оплаты
+        .pay-methods-list
+          .pay-methods-list-item
+            img(src="img/visa.png", alt="")
+          .pay-methods-list-item
+            img(src="img/mastercard.png", alt="")
+          .pay-methods-list-item
+            img(src="img/paypal.png", alt="")
+          .pay-methods-list-item
+            img(src="img/applePay.png", alt="")
+          .pay-methods-list-item
+            img(src="img/googlePay.png", alt="")
+          .pay-methods-list-item
+            img(src="img/tinkoff.png", alt="")
+            span рассрочка до 10 месяцев
+
+      .form-submit 
+        .accept
+          input(type="checkbox" id="accept" required)
+          label(for="accept") я принимаю условия публичной оферты*.
+        button(type="submit").submit Оплатить
+      
+

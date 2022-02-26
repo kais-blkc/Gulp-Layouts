@@ -1,0 +1,60 @@
+section.cases
+
+  .cases__tabs
+    margin-top: 70px
+    display: flex
+    flex-wrap: wrap
+    @media (max-width: 1350px)
+      margin-top: 30px
+    @media (max-width: 769px)
+      margin-top: 50px
+    &-item
+      margin-right: 30px
+      font-size: 24px
+      cursor: pointer
+      @media (max-width: 769px)
+        font-size: 16px
+        margin-bottom: 10px
+      &.active
+        text-decoration: underline
+
+  .cases__list
+    margin-top: 50px
+    &-item
+      .cases-item__imgs
+        height: 600px
+        @media (max-width: 1350px)
+          height: 400px
+        @media (max-width: 769px)
+          height: 200px
+        img
+          height: 600px
+          object-fit: contain
+          @media (max-width: 1350px)
+            height: 400px
+          @media (max-width: 769px)
+            height: 200px
+
+      .cases-item__desc
+        margin-top: 64px
+        h5
+          margin: 32px 0
+          @media (max-width: 1350px)
+            margin: 26px 0
+        p
+          margin-bottom: 16px
+          @media (max-width: 1350px)
+            margin-bottom: 14px
+
+      .review-item
+        width: 570px
+
+      .slick-arrow
+        &.slick-next
+          left: calc(52% - 15px)
+          @media (max-width: 769px)
+            left: calc(55% - 15px)
+        &.slick-prev
+          left: calc(48% - 15px)
+          @media (max-width: 769px)
+            left: calc(45% - 15px)

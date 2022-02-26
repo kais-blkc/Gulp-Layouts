@@ -1,0 +1,16 @@
+mixin our-team__item(img, name, pos, desc)
+  .our-team__list-item
+    img(src=img, alt="").our-team__item-img
+    h5.our-team__item-name=name 
+    .our-team__item-position=pos 
+    .our-team__item-desc!=desc
+
+section.our-team#our-team
+  .container 
+    h2 наша команда
+
+    .our-team__list
+      +our-team__item('img/ot-1.jpg','Денис Ошаров ','Руководитель веб студии','Опыт в разработке магазинов на insales - 5 лет ')
+      +our-team__item('img/ot-2.jpg','Дмитрий','Программист','Опыт в разработке магазинов на insales - 5 лет ')
+      +our-team__item('img/ot-3.jpg','Александр','Дизайнер','Опыт работы - 7 лет ')
+      +our-team__item('img/ot-4.jpg','Ольга','Менеджер по работе с клиентами','Опыт работы - 3 года ')

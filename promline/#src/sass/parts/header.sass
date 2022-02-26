@@ -1,0 +1,311 @@
+header
+  background: var(--header-black)
+  @media (max-width: 991px)
+    padding: 10px 0
+
+  .container
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    justify-content: space-between
+
+  .logo
+    width: 350px
+    display: block
+    @media (max-width: 1620px)
+      width: 260px
+    @media (max-width: 1420px)
+      width: 200px
+    @media (max-width: 767px)
+      width: 160px
+
+  .navbar-wrapper
+    z-index: 100
+    @media (max-width: 1000px)
+      transition: all .3s ease
+      position: fixed
+      visibility: hidden
+      width: 100%
+      height: 100%
+      background: rgba(0,0,0,.4)
+      right: 0
+      top: 0
+      &.active
+        opacity: 1
+        visibility: visible
+        .navbar
+          right: 0
+
+    .navbar
+      transition: all .3s ease
+      @media (max-width: 1000px)
+        right: -320px
+        width: 320px
+        height: 100%
+        position: fixed
+        right: -320px
+        top: 0
+        background: var(--header-black)
+        padding: 90px 0 20px
+
+  .navbar > ul
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    justify-content: space-between
+    transition: all .5s ease
+
+    @media (max-width: 1000px)
+      height: auto
+      width: 100%
+      background: var(--header-black)
+      flex-wrap: wrap
+      flex-direction: column
+      align-items: flex-start
+      justify-content: flex-start
+
+    li
+      position: relative
+      @media (max-width: 1000px)
+        width: 100%
+        &:hover
+          & > ul
+            top: 0
+            padding: 10px 15px
+            max-height: 700px
+      &:hover
+        & > a.not-hover
+          background: inherit
+          cursor: auto
+        & > a
+          background: var(--header-black__hover)
+        & > ul
+          opacity: 1
+          visibility: visible
+          top: 100%
+
+      &.has-child
+        & > a::after
+          @include ba()
+          position: relative
+          margin-left: 3px
+          display: inline-block
+          border-top: 8px solid white
+          border-right: 5px solid transparent
+          border-bottom: 0.1px solid transparent
+          border-left: 5px solid transparent
+
+      a
+        color: #fff
+        display: block
+        padding: 50px 32px
+        text-decoration: none
+        transition: var(--trans-2s)
+        &:hover
+          background: var(--header-black__hover)
+        @media (max-width: 1420px)
+          padding: 25px 14px
+        @media (max-width: 1000px)
+          padding: 15px 20px
+
+      & > ul
+        opacity: 0
+        visibility: hidden
+        position: absolute
+        left: 0
+        top: 70%
+        transition: var(--trans-2s)
+        background: var(--header-black__hover)
+        @media (max-width: 1000px)
+          padding: 0
+          max-height: 0
+          overflow: hidden
+          position: relative
+          left: 0
+          top: 0
+
+        .has-child a::after
+          width: 6px
+          height: 6px
+          border: none
+          transform: rotate(-45deg)
+          border-right: 2px solid #fff
+          border-bottom: 2px solid #fff
+          position: absolute
+          top: calc(50% - 1px)
+          right: 10px
+
+        li
+          &:hover
+            a
+              background: #3A3A3A
+            ul
+              top: 0
+              left: 100%
+              opacity: 1
+              visibility: visible
+          @media (max-width: 991px)
+            &:hover
+              ul
+                max-height: 1000px
+          a
+            padding: 15px 20px
+            font-size: 14px
+            transition: var(--trans-2s)
+            &:hover
+              background: #3A3A3A
+              color: var(--accent-yellow)
+
+          ul
+            min-width: 220px
+            opacity: 0
+            visibility: hidden
+            top: 0
+            left: 80%
+            position: absolute
+            background: #3a3a3a
+            @media (max-width: 991px)
+              position: relative
+              top: 0
+              left: 0 !important
+              max-height: 0px
+              overflow: hidden
+
+            li
+              a
+                color: #fff
+
+  .languages__mob
+    display: none
+    margin-bottom: 25px
+    padding: 0 15px
+    position: absolute
+    top: 35px
+    left: 15px
+    & > div
+      margin-right: 15px
+    @media (max-width: 991px)
+      display: flex
+      justify-content: center
+
+  .contacts-mob
+    display: none
+    @media (max-width: 991px)
+      display: block
+    .tel-soc
+      @media (max-width: 991px)
+        display: block
+        padding: 0 15px
+        margin-top: 25px
+        text-align: center
+    .social-list
+      margin: 0 auto
+      justify-content: center
+      &__item
+        width: 45px
+        height: 45px
+        transition
+
+  .burger
+    display: none
+    @media (max-width: 1000px)
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 35px
+      height: 35px
+      order: 1
+    .burger-line
+      width: 100%
+      height: 2px
+      background: #fff
+      position: relative
+      &::before,&::after
+        @include ba()
+        left: 0
+        width: 100%
+        height: 2px
+        background: #fff
+      &::before
+        top: -10px
+      &::after
+        bottom: -10px
+
+  .burger-close
+    display: none
+    @media (max-width: 1000px)
+      display: block
+      width: 35px
+      height: 35px
+      display: flex
+      align-items: center
+      justify-content: center
+      position: absolute
+      right: 20px
+      top: 30px
+      &::before, &::after
+        @include ba()
+        position: relative
+        width: 100%
+        height: 2px
+        background: #fff
+        position: absolute
+      &::before
+        transform: rotate(45deg)
+      &::after
+        transform: rotate(-45deg)
+
+.contacts, .contacts-mob
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+
+  .tel-soc
+    margin-right: 54px
+    @media (max-width: 1620px)
+      margin-right: 32px
+    @media (max-width: 1420px)
+      display: none
+
+  .number
+    color: #fff
+    font-size: 20px
+    position: relative
+    &::before
+      @include ba()
+      display: inline-block
+      margin-right: 15px
+      position: relative
+      width: 20px
+      height: 20px
+      background: center / contain no-repeat url('../img/y-phone.svg')
+
+    span
+      color: var(--accent-yellow)
+  .social-list
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    margin-left: 35px
+    &__item
+      margin: 4px
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 30px
+      height: 30px
+      border-radius: 50%
+      background: #3A3A3A
+      transition: var(--trans-2s)
+      &:hover
+        transform: translateY(-5px)
+  .languages
+    display: flex
+    @media (max-width: 991px)
+      display: none
+    div
+      width: 40px
+      height: 26px
+      margin-left: 14px
+      &:first-child
+        margin: 0

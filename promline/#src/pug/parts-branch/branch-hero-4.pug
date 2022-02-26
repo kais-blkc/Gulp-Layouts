@@ -1,0 +1,22 @@
+mixin hb-item(img, text)
+  .hero-branch__list-item
+    .hero-branch__item-img
+      img(src=img, alt="")
+    .hero-branch__item-desc=text
+
+section.hero-branch 
+  .container 
+    .breadcrumbs Главная >> решение задач >> #[a(href="javascript:void(0)") горнодобывающая отрасль]
+
+    .h1-title
+      h1 Ликвидация чс
+      p Мобильность, легкость, качество!
+    
+    .hero-branch__list
+      +hb-item('img/hb-4.1.jpg', 'Организация временного водоснабжения')
+      +hb-item('img/hb-4.2.jpg', 'Подача воды при пожаротушении')
+      +hb-item('img/hb-4.3.jpg', 'Резервный или дополнительный независимый трубопровод для пожаротушения на нефтехранилищах и других опасных промышленных объектах.')
+      +hb-item('img/hb-4.4.jpg', 'Подача воды в труднодоступные районы в условиях повышенной засухи')
+      +hb-item('img/hb-4.5.jpg', 'Осушение паводковых вод')
+      +hb-item('img/hb-4.6.jpg', 'Подача воды для различных технологических нужд')
+      +hb-item('img/hb-1.8.jpg', 'Аварийная доставка питьевой воды')

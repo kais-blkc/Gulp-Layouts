@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Корзина</title>
+    <link rel="stylesheet" href="./css/style.min.css"/>
+  </head>
+  <body>
+    <header class="cart">
+      <div class="container"> 
+        <div class="author">АВТОРСКИЙ КУРС <span>ИВАНА БАКУРОВА</span></div>
+        <div class="business-zero">БИЗНЕС С <span class="zero">0</span> НА ЛЮБИМОМ ДЕЛЕ</div>
+      </div>
+    </header>
+    <main>
+      <section class="cart-main"> 
+        <div class="container">
+          <div class="cart-title">Корзина</div>
+          <div class="cart-list">
+            <div class="cart-list-item">
+              <div class="cart-list-item-detail">
+                <div class="name">Как запустить свой бизнес с 0 пакет <span>“LIVE”</span></div>
+                <div class="price">4.900Р</div>
+              </div>
+              <button class="btn-close">X</button>
+            </div>
+            <div class="cart-list-item">
+              <div class="cart-list-item-detail">
+                <div class="name">Сопровождение куратора</div>
+                <div class="price">1.000Р</div>
+              </div>
+              <button class="btn-close">X</button>
+            </div>
+          </div>
+          <div class="common">
+            <button class="add-more">+ добавить курс или куратора</button>
+            <div class="common-price">Итого: <span id="common-price-count">5.900р</span></div>
+          </div>
+          <form>
+            <div class="contacts">
+              <div class="contacts-title">Контактные данные</div>
+              <div class="contacts-wrapper">
+                <div class="inputs">
+                  <input type="text" placeholder="Фамилия Имя" required="required"/>
+                  <input type="text" placeholder="Телефон" required="required"/>
+                  <input type="text" placeholder="Instagram"/>
+                  <input type="email" placeholder="E-mail" required="required"/>
+                </div>
+                <label class="new-user" for="new-user">
+                  <input type="checkbox" id="new-user"/>
+                  <div class="check"></div>
+                </label>
+              </div>
+            </div>
+            <div class="pay-methods">
+              <div class="pay-methods-title">Способ оплаты</div>
+              <div class="pay-methods-list">
+                <div class="pay-methods-list-item"><img src="img/visa.png" alt=""/></div>
+                <div class="pay-methods-list-item"><img src="img/mastercard.png" alt=""/></div>
+                <div class="pay-methods-list-item"><img src="img/paypal.png" alt=""/></div>
+                <div class="pay-methods-list-item"><img src="img/applePay.png" alt=""/></div>
+                <div class="pay-methods-list-item"><img src="img/googlePay.png" alt=""/></div>
+                <div class="pay-methods-list-item"><img src="img/tinkoff.png" alt=""/><span>рассрочка до 10 месяцев</span></div>
+              </div>
+            </div>
+            <div class="form-submit"> 
+              <div class="accept">
+                <input type="checkbox" id="accept" required="required"/>
+                <label for="accept">я принимаю условия публичной оферты*.</label>
+              </div>
+              <button class="submit" type="submit">Оплатить</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="cart"> 
+      <div class="container">
+        <div class="text"> 
+          <p>ИП Бакуров Иван Анатольевич</p>
+          <p>г. Санкт-Петербург ОРГНИП 0000000000</p>
+        </div>
+        <div class="footer-contacts"> <a class="number" href="#">+7 (900) 000-00-00</a>
+          <div class="soc-list"> <a class="soc-list-item" href="#"> <img src="img/inst.png" alt=""/></a><a class="soc-list-item" href="#"> <img src="img/tlgrm.png" alt=""/></a><a class="soc-list-item" href="#"> <img src="img/whtsp.png" alt=""/></a></div>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

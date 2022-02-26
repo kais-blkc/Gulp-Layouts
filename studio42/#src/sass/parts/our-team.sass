@@ -1,0 +1,46 @@
+section.our-team
+  padding: 150px 0 100px
+  @media (max-width: 1350px)
+    padding: 100px 0
+  @media (max-width: 769px)
+    padding: 70px 0
+
+  h2
+    margin-bottom: 70px
+    @media (max-width: 1350px)
+      margin-bottom: 50px
+
+  .our-team__list
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+
+    &-item
+      width: 23%
+      @media (max-width: 1060px)
+        width: 48%
+        margin-bottom: 32px
+      @media (max-width: 769px)
+        width: 320px
+        margin: 0 auto 32px
+
+      .our-team__item-img
+        max-height: 350px
+        object-fit: cover
+        border-radius: 20px
+        @media (max-width: 1350px)
+          max-height: 290px
+        @media (max-width: 769px)
+          max-height: 414px
+
+      .our-team__item-name
+        margin-top: 16px
+        @media (max-width: 1350px)
+          margin-top: 8px
+
+      .our-team__item-position
+        margin-top: 8px
+
+      .our-team__item-desc
+        margin-top: 8px
+        opacity: .7

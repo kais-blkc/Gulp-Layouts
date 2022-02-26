@@ -1,0 +1,37 @@
+section.support
+
+  .support
+    margin-bottom: 30px
+    font-size: 36px
+    font-weight: 300
+    text-align: center
+    color: var(--blue-middle)
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+    &::before
+      content: ''
+      margin-right: 20px
+      display: block
+      min-width: 50px
+      min-height: 50px
+      background: center / contain no-repeat url('../img/support.png')
+    @media (max-width: 769px)
+      font-size: 28px
+    @media (max-width: 340px)
+      font-size: 22px
+      &::before
+        margin-right: -20px
+        min-width: 30px
+        min-height: 30px
+
+  a
+    margin: 0 auto
+    color: #fff
+    border: 2px solid transparent
+    background-color: var(--blue-middle)
+    &:hover
+      background: transparent
+      color: var(--blue-middle)
+      border-color: var(--blue-middle)

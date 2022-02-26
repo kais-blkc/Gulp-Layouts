@@ -1,0 +1,383 @@
+section.constructor
+  padding-top: 0
+  overflow: hidden
+
+  .form-container
+    display: flex
+    flex-wrap: wrap
+    align-items: flex-start
+    justify-content: space-between
+
+    .input-div
+      width: 48%
+
+    .pressure-input, .input-div
+      position: relative
+      &::after
+        @include ba()
+        content: 'Bar.'
+        font-size: 16px
+        color: var(--accent-yellow)
+        right: 5px
+        top: 23px
+        @media (max-width: 1420px)
+          font-size: 14px
+      .pressure
+        width: 100%
+        padding-right: 45px
+
+    .input-div
+      &::after
+        content: 'M.'
+      input
+        padding-right: 30px !important
+
+    .form-item
+      width: 18%
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+      font-size: 20px
+      @media (max-width: 1420px)
+        font-size: 14px
+      @media (max-width: 1000px)
+        width: 48%
+        font-size: 16px
+        margin-bottom: 30px
+      @media (max-width: 767px)
+        width: 100%
+        .jq-selectbox__dropdown li
+          &::before, &::after
+            display: none !important
+
+      &:nth-child(2)
+        .jq-selectbox__dropdown li
+          &:nth-child(2)
+            &::before
+              background-image: url('../img/a-cpt-1.1.png')
+            &::after
+              background-image: url('../img/a-cpt-1.2.png')
+          &:nth-child(3)
+            &::before
+              background-image: url('../img/a-cpt-1.1.png')
+            &::after
+              background-image: url('../img/a-cpt-2.1.png')
+          &:nth-child(4)
+            &::before
+              background-image: url('../img/a-cpt-3.1.png')
+
+      &:nth-child(4)
+        .jq-selectbox__dropdown li
+          &:nth-child(2)
+            &::before
+              background-image: url('../img/a-cpt-1.1.png')
+          &:nth-child(3)
+            &::before
+              background-image: url('../img/conn-2.png')
+          &:nth-child(4)
+            &::before
+              background-image: url('../img/conn-3.png')
+          &:nth-child(5)
+            &::before
+              background-image: url('../img/conn-4.png')
+          &:nth-child(6)
+            &::before
+              background-image: url('../img/conn-5.png')
+          &:nth-child(7)
+            &::before
+              background-image: url('../img/conn-6.png')
+
+      .jq-selectbox__dropdown
+        ul li
+          position: relative
+          padding-right: 75px !important
+          &::before, &::after
+            @include ba()
+            width: 30px
+            height: 30px
+            background: center / contain no-repeat
+            top: calc(50% - 15px)
+            right: 12px
+            z-index: 11
+          &::after
+            right: 40px
+
+      .alert-message
+        display: none
+
+      .jq-selectbox, .div-input, input
+        &.err
+          background: rgba(255,0,0, .05) !important
+          &::before
+            content: ''
+            display: block
+            width: 100%
+            height: 100%
+            background: rgba(255,0,0, .05) !important
+            position: absolute
+            left: 0
+            top: 0
+            z-index: 3
+            cursor: auto
+            transition: var(--trans-2s)
+
+      &.disabled-sel
+        position: relative
+
+        .jq-selectbox, .input-div
+          position: relative
+          &:hover
+            &::before
+              background: rgba(255,0,0, .05)
+            .alert-message
+              opacity: 1
+              visibility: visible
+              top: -85px
+              z-index: 100
+
+          &::before
+            content: ''
+            display: block
+            width: 100%
+            height: 100%
+            background: rgba(255,255,255, 0.5)
+            position: absolute
+            left: 0
+            top: 0
+            z-index: 3
+            cursor: auto
+            transition: var(--trans-2s)
+
+          .alert-message
+            display: block
+            padding: 20px 12px 20px 46px
+            width: 240px
+            font-size: 14px
+            background: #fbfbfb
+            box-shadow: 0 0 2px rgba(0,0,0,.3)
+            transition: var(--trans-2s)
+            position: absolute
+            right: -30px
+            top: -75px
+            opacity: 0
+            visibility: hidden
+            z-index: 6
+            @media (max-width: 767px)
+              right: 0
+            &::before
+              @include ba()
+              width: 26px
+              height: 26px
+              display: inline-block
+              background: center / contain no-repeat url('../img/warning-err.svg')
+              top: calc(50% - 13px)
+              left: 12px
+
+      &__title
+        margin-bottom: 10px
+        position: relative
+        &:hover
+          .help-text
+            opacity: 1
+            visibility: visible
+        .help-icon
+          width: 15px
+          height: 15px
+          display: inline-block
+          background: center / contain no-repeat url('../img/form-help.svg')
+          position: absolute
+          right: -20px
+          top: 5px
+        .help-text
+          padding: 12px
+          width: 235px
+          border-radius: 2px
+          background: #FBFBFB
+          box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3)
+          transition: var(--trans-2s)
+          position: absolute
+          bottom: 0
+          left: 100%
+          visibility: hidden
+          opacity: 0
+          z-index: 100
+          font-size: 16px
+          @media (max-width: 767px)
+            left: 0
+
+      input
+        padding: 0 25px
+        font-size: 20px
+        border: none
+        outline: none
+        background-color: #FBFBFB
+        height: 65px
+        line-height: 65
+        &::placeholder
+          color: #ACACAC
+        @media (max-width: 1420px)
+          font-size: 14px
+          padding: 0 15px
+        @media (max-width: 1000px)
+          font-size: 16px
+
+      .diameter,.pressure-input
+        display: inline-block
+        width: 48%
+
+      .length
+        width: 100%
+
+    .reset
+      margin-top: 55px
+      background: transparent
+      text-decoration-line: underline
+      color: var(--accent-yellow)
+      line-height: 26px
+      font-size: 20px
+      cursor: pointer
+      border: none
+      @media (max-width: 1420px)
+        font-size: 14px
+      @media (max-width: 1000px)
+        font-size: 16px
+      @media (max-width: 1000px)
+        font-size: 16px
+        margin-top: 0
+
+    .jq-selectbox
+      width: 100%
+      margin-bottom: 14px
+      &.changed
+        .jq-selectbox__select
+          color: var(--text-color)
+
+      .jq-selectbox__select
+        padding: 0 25px
+        height: 64px
+        display: flex
+        align-items: center
+        background: #FBFBFB
+        box-shadow: none
+        color: #ACACAC
+        border: none
+        @media (max-width: 1420px)
+          padding: 0 15px
+      .jq-selectbox__select-text
+        font-size: 20px
+        @media (max-width: 1420px)
+          font-size: 14px
+        @media (max-width: 1000px)
+          font-size: 16px
+
+      .jq-selectbox__trigger
+        border: none
+
+      .jq-selectbox__trigger-arrow
+        width: 10px
+        height: 10px
+        top: 22px
+        border: none
+        border-top: 2px solid var(--accent-yellow)
+        border-right: 2px solid var(--accent-yellow)
+        transform: rotate(135deg)
+
+      .jq-selectbox__dropdown
+        min-width: 100%
+        width: auto !important
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25)
+        @media (max-width: 767px)
+          max-width: 100%
+        ul
+          padding: 10px 16px
+          background: #fbfbfb
+          @media (max-width: 1420px)
+            padding: 10px
+        li
+          font-size: 20px
+          border-radius: 8px
+          padding: 8px 12px
+          &:hover
+            background-color: var(--accent-yellow)
+          @media (max-width: 1420px)
+            font-size: 14px
+          @media (max-width: 1000px)
+            font-size: 16px
+
+          &.selected
+            background-color: var(--accent-yellow)
+
+  .form-previews
+    margin-top: 50px
+    margin-bottom: 30px
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    font-size: 20px
+
+    &__item
+      width: 30%
+      height: 464px
+      display: flex
+      align-items: center
+      justify-content: center
+      border: 2px solid var(--accent-yellow)
+      color: var(--accent-yellow)
+      text-align: center
+      position: relative
+      @media (max-width: 1420px)
+        font-size: 14px
+        height: 264px
+      @media (max-width: 1000px)
+        font-size: 16px
+      @media (max-width: 767px)
+        font-size: 10px
+        width: 32%
+        height: 100px
+
+      &::before
+        @include ba()
+        width: 92%
+        height: 92%
+        background: #fbfbfb
+        top: calc(50% - 46%)
+        left: calc(50% - 46%)
+        z-index: -1
+
+      &-img
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 92%
+        height: 92%
+        position: absolute
+        top: calc(50% - 46%)
+        left: calc(50% - 46%)
+        img
+          max-width: 100%
+          max-height: 100%
+
+  .order
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    justify-content: flex-end
+    .free-consultation
+      margin-right: 26px
+      font-size: 20px
+      @media (max-width: 1420px)
+        font-size: 14px
+      @media (max-width: 1000px)
+        font-size: 16px
+      @media (max-width: 767px)
+        margin-top: 12px
+        margin-right: 0
+        width: 100%
+        font-size: 14px
+        text-align: center
+        line-height: 120%
+        order: 1
+
+    .yellow-btn
+      @media (max-width: 767px)
+        margin: 0 auto

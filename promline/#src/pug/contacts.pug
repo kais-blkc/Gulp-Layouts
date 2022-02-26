@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Cordtec
+    link(rel="stylesheet", href="./css/style.min.css")
+    link(rel="stylesheet", href="./css/jquery.formstyler.theme.css")
+    link(rel="stylesheet", href="./css/jquery.formstyler.css")
+    link(rel="stylesheet", href="./css/swiper-bundle.min.css")
+  body
+
+    include parts/header
+
+    main
+
+      <!-- Contacts -->
+      section.contacts
+        .container 
+          
+          .breadcrumbs Главная >> #[a(href="#") контакты] 
+          .h1-title.yellow-line
+            h1 Контакты
+
+          .constacts-top 
+
+            .constacts-socials
+              h4 Подпишитесь на нас в соц сетях:
+              .constacts-socials__list
+                a(href="#").constacts-socials__list-item Мы в YouTube
+                a(href="#").constacts-socials__list-item Мы в Instagram
+            
+            .contacts-info 
+              .contacts-info__item
+                h4 Основной офис
+                ul
+                  li 
+                    a(href="#") 664043, Иркутск, #[br] ул. Александра Невского, 58, оф. 26
+                  li 
+                    a(href="#") 8 800 55 180 22
+                  li 
+                    a(href="#") info@promline.su
+              .contacts-info__item
+                h4 Склады
+                ul
+                  li 
+                    a(href="#") #[b г. Иркутск]
+                  li 
+                    a(href="#") #[b г. Артем] #[br]
+              .contacts-info__item
+                h4 Контакты
+                ul
+                  li 
+                    a(href="javascript:void(0)") Телеграмм 
+                  li 
+                    a(href="javascript:void(0)") Вацап 
+                  li 
+                    a(href="javascript:void(0)") Вайбер 
+          .contacts-bottom.contacts-form
+            h2 Появились вопросы?
+            p Мы готовы дать ответы. Просто оставтье данные для связи с вами  
+
+            form
+              label Ваше имя
+                input(type="text" name="name" required)
+              label Ваш e-mail
+                input(type="email" name="email" required)
+              button.yellow-btn Отправить
+               
+
+    <!-- Footer ============= -->
+    include parts/footer
+
+    <!-- Global Els ============= -->
+    include parts/modal-form
+    
+
+    script(src="./js/jquery-3.6.0.min.js")
+    script(src="./js/jquery.formstyler.min.js")
+    script(src="./js/swiper-bundle.min.js")
+    script(src="./js/imask.js")
+    script(src="./js/main.js")

@@ -1,0 +1,184 @@
+section.products
+  .h1-title
+    @media (max-width: 767px)
+      margin-top: 60px
+      margin-bottom: 30px
+
+  .products-list
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+
+    .products-list__item
+      margin-bottom: 100px
+      padding: 45px
+      width: 44%
+      min-height: 320px
+      background: #fff
+      border: 2px solid var(--accent-yellow)
+      position: relative
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      @media (max-width: 1420px)
+        width: 42%
+        margin-bottom: 70px
+        padding: 25px
+        min-height: 300px
+        &::before
+          bottom: 25px
+          left: 25px
+          border-right: 260px solid transparent
+          border-bottom: 260px solid #E23A63
+
+      @media (max-width: 1000px)
+        padding: 15px
+        &::before
+          bottom: 15px
+          left: 15px
+
+      @media (max-width: 767px)
+        margin: 0 auto 20px
+        width: 300px
+        min-height: 220px
+        &::before
+          border-right: 180px solid transparent
+          border-bottom: 180px solid #E23A63
+
+      &::before
+        @include ba()
+        width: 0
+        height: 0
+        border-right: 310px solid transparent
+        border-bottom: 310px solid #E23A63
+        bottom: 35px
+        left: 40px
+        z-index: 0
+
+      &.red
+        &::before
+          border-bottom-color: #E23A63
+      &.green
+        &::before
+          border-bottom-color: #428941
+      &.blue
+        &::before
+          border-bottom-color: #2970C2
+      &.yellow
+        &::before
+          border-bottom-color: #FFC83C
+      &.light-blue
+        &::before
+          border-bottom-color: #85A2C5
+      &.light-yellow
+        &::before
+          border-bottom-color: #EDB561
+
+      &-title
+        font-size: 28px
+        font-weight: 700
+        text-align: right
+        text-transform: uppercase
+        @media (max-width: 1420px)
+          font-size: 18px
+      &-img
+        max-width: 300px
+        height: 190px
+        margin-left: 80px
+        transform: translate(-45px, 0)
+        display: flex
+        align-items: flex-end
+        @media (max-width: 1420px)
+          height: auto
+          width: 180px
+        @media (max-width: 1000px)
+          width: 140px
+        @media (max-width: 767px)
+          width: 100px
+          height: auto
+          transform: translateX(-50px)
+      &-btn
+        margin-left: auto
+        width: 200px
+        transform: translateY(-25px)
+        @media (max-width: 767px)
+          width: 100px
+          height: 30px
+          font-size: 12px
+
+      &-more
+        padding: 45px
+        width: 100%
+        height: 100%
+        color: #fff
+        background: var(--accent-yellow)
+        position: absolute
+        left: 0
+        top: 0
+        opacity: 0
+        visibility: hidden
+        transition: var(--trans-3s)
+        overflow-y: auto
+        @media (max-width: 1420px)
+          padding: 15px
+
+        .products-list__item-title
+          text-align: left
+          transform: translateX(10px)
+
+        ul
+          margin-top: 20px
+          @media (max-width: 767px)
+            margin-top: 10px
+          li
+            a
+              padding: 15px 12px
+              margin-bottom: 5px
+              display: inline-block
+              font-size: 20px
+              color: #fff
+              &:hover
+                background: var(--header-black)
+                & ~ .img
+                  opacity: 1
+                  visibility: visible
+              @media (max-width: 1420px)
+                font-size: 16px
+                padding: 14px 12px
+              @media (max-width: 1000px)
+                padding: 10px 12px
+              @media (max-width: 767px)
+                font-size: 12px
+
+            .img
+              max-width: 240px
+              height: 190px
+              opacity: 0
+              visibility: hidden
+              transition: var(--trans-2s)
+              position: absolute
+              right: 75px
+              top: calc(50% - 95px)
+              @media (max-width: 1420px)
+                max-width: 160px
+                height: 140px
+                right: 25px
+                top: calc(50% - 70px)
+              @media (max-width: 1000px)
+                display: none
+
+      &-btn:focus ~ .products-list__item-more
+        opacity: 1
+        visibility: visible
+
+    .products-list__item__soon
+      margin: 0 auto
+      .products-list__item-title
+        margin-bottom: 54px
+        text-align: center
+        color: #6c6c6c
+      img
+        margin: 0 auto
+        display: block
+        transform: translateX(-25px)
+        filter: contrast(0.3)

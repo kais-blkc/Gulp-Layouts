@@ -1,0 +1,385 @@
+mixin hsl-item(title, desc)
+  .hose-sys__list-item
+    .hose-sys__item-title!=title
+    .hose-sys__item-desc!=desc
+
+mixin tl-item(img, desc)
+  .technology-list__item
+    .technology-list__item-img
+      img(src=img, alt="")
+    .technology-list__item-desc!=desc
+
+<!DOCTYPE html>
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Cordtec
+    link(rel="stylesheet", href="./css/style.min.css")
+    link(rel="stylesheet", href="./css/jquery.formstyler.theme.css")
+    link(rel="stylesheet", href="./css/jquery.formstyler.css")
+    link(rel="stylesheet", href="./css/swiper-bundle.min.css")
+    link(rel="stylesheet", href="./css/fancybox.css")
+  body
+
+    include parts/header
+
+    main
+      section.single-product.yellow-lines
+        .container 
+          .breadcrumbs Главная >> Каталог >>  шланги >> #[a(href="#") Напорные плоскосворачиваемые TPU] 
+
+          h2.mob Напорные плоскосворачиваемые TPU
+          .single-product__info
+            .single-product__info-left
+              .single-product__images
+                .images-item.single-images__slider
+                  .swiper-wrapper
+                    .swiper-slide
+                      a(href="img/sp-1.png" data-fancybox="product-images").img
+                        img(src="img/sp-1.png", alt="")
+                    .swiper-slide
+                      a(href="img/sp-2.jpg" data-fancybox="product-images").img
+                        img(src="img/sp-2.jpg", alt="")
+                    .swiper-slide
+                      a(href="img/sp-3.jpg" data-fancybox="product-images").img
+                        img(src="img/sp-3.jpg", alt="")
+                    .swiper-slide
+                      a(href="img/sp-4.jpg" data-fancybox="product-images").img
+                        img(src="img/sp-4.jpg", alt="")
+                    .swiper-slide
+                      a(href="img/sp-5.jpg" data-fancybox="product-images").img
+                        img(src="img/sp-5.jpg", alt="")
+                    .swiper-slide
+                      a(href="img/sp-6.jpg" data-fancybox="product-images").img
+                        img(src="img/sp-6.jpg", alt="")
+
+                .images-small.single-images__slider2
+                  .swiper-wrapper
+                    .swiper-slide.images-small-item
+                      img(src="img/sp-1.png", alt="")
+                    .swiper-slide.images-small-item
+                      img(src="img/sp-2.jpg", alt="")
+                    .swiper-slide.images-small-item
+                      img(src="img/sp-3.jpg", alt="")
+                    .swiper-slide.images-small-item
+                      img(src="img/sp-4.jpg", alt="")
+                    .swiper-slide.images-small-item
+                      img(src="img/sp-5.jpg", alt="")
+                    .swiper-slide.images-small-item
+                      img(src="img/sp-6.jpg", alt="")
+
+                  .swiper-button-next
+                  .swiper-button-prev
+                  
+            .single-product__info-right
+              h2 Напорные плоскосворачиваемые TPU
+              p.single-product__desc сюда можно вставить какую-либо техническую информацию (характеристики)
+              p.single-product__desc сюда можно вставить какую-либо техническую информацию (характеристики)
+
+      include parts/hose-block
+
+      section.technology
+        .container
+          h2 Технология производства
+
+          .technology-list
+            +tl-item('img/tl-1.png', 'Основной преимуществом шланговых систем из полиуретана являются надежность и износостойкость. Полиуретан не содержит токсических соединений и не окисляется в процессе эксплуатации. Внутренняя часть изделий гладкая, что обеспечивает быстрое и беспрепятственное перемещение транспортируемой среды.')
+            +tl-item('img/tl-2.png', 'Основной преимуществом шланговых систем из полиуретана являются надежность и износостойкость. Полиуретан не содержит токсических соединений и не окисляется в процессе эксплуатации. Внутренняя часть изделий гладкая, что обеспечивает быстрое и беспрепятственное перемещение транспортируемой среды. <br> Диапазон рабочих температур полиуретановых шлангов PROMLINE от -70°C до +80°C, что выгодно отличает их от ПВХ шлангов (от -5°C до +65°C) и шлангов из резины (от -30°C до +80°C).')
+            +tl-item('img/tl-3.png', 'Шланги PROMLINE изготавливаются на высокотехнологичном оборудовании методом экструзии «Extrusion through the weave» из полимерных материалов с применением полиэфирных нитей (нитяной каркас). <br> Каждая партия произведенной продукции проходит тщательные испытания. <br> Первоклассные свойства полиуретана уже достаточно хорошо зарекомендовали себя во всем мире, но и это еще не предел!')
+
+      section.table 
+        .container 
+          .table-wrapper 
+
+            table(cellspacing="0" border="0")
+              thead 
+                tr
+                  th Номинальный #[br] внутренний диаметр (мм)
+                  th Артикул
+                  th Толщина стенки #[br] (мм)
+                  th Удельный вес #[br] (кг/м)
+                  th Рабочее давление #[br] (бар)
+                  th Давление разрыва #[br] (бар)
+                  th Антистатический провод #[br] (да/нет)
+
+              tbody 
+                tr 
+                  td 51.0~52.0
+                  td 
+                    p TPU PL 50-10/30
+                    p TPU PL 50-16/48
+                    p TPU PL 50-28/84
+                  td 
+                    p ≤3.0
+                    p ≤3.5
+                    p -
+                  td 
+                    p ≤0.7 
+                    p ≤0.8
+                    p -
+                  td 
+                    p ≤10
+                    p ≤16
+                    p ≤28
+                  td 
+                    p ≥30
+                    p ≥48
+                    p ≥84
+                  td 
+                    p Да
+                    p Да
+                    p Да
+                tr 
+                  td 63.0~64.0
+                  td 
+                    p TPU PL 65-10/30
+                    p TPU PL 65-16/48
+                    p TPU PL 65-28/84
+                  td 
+                    p ≤3.0
+                    p ≤3.5
+                    p -
+                  td 
+                    p -
+                    p ≤3.5
+                    p -
+                  td 
+                    p ≤10
+                    p ≤16
+                    p ≤28
+                  td 
+                    p ≥30
+                    p ≥48
+                    p ≥84
+                  td 
+                    p Да
+                    p Да
+                    p Да
+                tr 
+                  td 81.0~82.0
+                  td 
+                    p TPU PL 80-10/30
+                    p TPU PL 80-16/48
+                    p TPU PL 80-28/84
+                  td 
+                    p ≤3.0
+                    p ≤3.0
+                    p -
+                  td 
+                    p ≤0.9
+                    p ≤1.1
+                    p -
+                  td 
+                    p ≤10
+                    p ≤16
+                    p ≤28
+                  td 
+                    p ≥30
+                    p ≥48
+                    p ≥84
+                  td 
+                    p Да
+                    p Да
+                    p Да
+                tr 
+                  td 101.0~103.0
+                  td 
+                    p TPU PL 100-10/30
+                    p TPU PL 100-16/48
+                    p TPU PL 100-28/84
+                  td 
+                    p ≤4.5
+                    p ≤5.0
+                    p ≤5.5
+                  td 
+                    p ≤1.4
+                    p ≤1.6
+                    p ≤2.0
+                  td 
+                    p ≤10
+                    p ≤16
+                    p ≤28
+                  td 
+                    p ≥30
+                    p ≥48
+                    p ≥84
+                  td 
+                    p Да
+                    p Да
+                    p Да
+                tr 
+                  td 127.0~129.0
+                  td 
+                    p TPU PL 125-10/30
+                    p TPU PL 125-16/48
+                    p TPU PL 125-28/84
+                  td 
+                    p ≤4.3
+                    p -
+                    p -
+                  td 
+                    p ≤1.8
+                    p -
+                    p -
+                  td 
+                    p ≤10
+                    p ≤16
+                    p ≤28
+                  td 
+                    p ≥30
+                    p ≥48
+                    p ≥84
+                  td 
+                    p Да
+                    p Да
+                    p Да
+                tr 
+                  td 152.0~154.0
+                  td 
+                    p TPU PL 150-10/30
+                    p TPU PL 150-16/48
+                    p TPU PL 150-28/84
+                  td 
+                    p ≤4.0
+                    p ≤7.0
+                    p ≤7.5
+                  td 
+                    p ≤2.0
+                    p ≤2.6
+                    p ≤3.3
+                  td 
+                    p ≤10
+                    p ≤16
+                    p ≤28
+                  td 
+                    p ≥30
+                    p ≥48
+                    p ≥84
+                  td 
+                    p Да
+                    p Да
+                    p Да
+                tr 
+                  td 203.0~206.0
+                  td 
+                    p TPU PL 200-10/30
+                    p TPU PL 200-16/42
+                    p TPU PL 200-28/82
+                  td 
+                    p ≤6.0
+                    p ≤7.0
+                    p ≤7.0
+                  td 
+                    p ≤3.7
+                    p ≤4.2
+                    p ≤4.8
+                  td 
+                    p ≤10
+                    p ≤16
+                    p ≤28
+                  td 
+                    p ≥30
+                    p ≥48
+                    p ≥84
+                  td 
+                    p Нет
+                    p Нет
+                    p Нет
+                tr 
+                  td 254.0~257.0
+                  td 
+                    p TPU PL 250-10/30
+                    p TPU PL 250-14/42
+                    p TPU PL 250-14/42
+                  td 
+                    p ≤5.0
+                    p ≤7.0
+                    p ≤8.0
+                  td 
+                    p ≤4.5
+                    p ≤5.1
+                    p ≤6.1
+                  td 
+                    p ≤10
+                    p ≤16
+                    p ≤28
+                  td 
+                    p ≥30
+                    p ≥48
+                    p ≥84
+                  td 
+                    p Да
+                    p Да
+                    p Да
+                tr 
+                  td 304.0~306.0
+                  td 
+                    p TPU PL 300-10/30
+                    p TPU PL 300-14/42
+                  td 
+                    p ≤6.0
+                    p ≤7.0
+                  td 
+                    p ≤5.1
+                    p ≤6.1
+                  td 
+                    p ≤10
+                    p ≤14
+                  td 
+                    p ≥30
+                    p ≥42
+                  td 
+                    p Нет
+                    p Нет
+                tr 
+                  td 356.0~360.0
+                  td 
+                    p TPU PL 350-10/30
+                  td 
+                    p -
+                  td 
+                    p -
+                  td 
+                    p ≤10
+                  td 
+                    p ≥30
+                  td 
+                    p Нет
+                tr 
+                  td 406.0~410.0
+                  td 
+                    p TPU PL 400-10/30
+                  td 
+                    p -
+                  td 
+                    p -
+                  td 
+                    p ≤10
+                  td 
+                    p ≥30
+                  td 
+                    p Нет
+
+
+    <!-- Promline-standarts ============= -->
+    include parts/promline-standards
+    <!-- Our-partners ============= -->
+    include parts/our-partners
+    <!-- Constructor ============= -->
+    include parts/constructor
+
+
+    <!-- Footer ============= -->
+    include parts/footer
+
+      <!-- Global Els ============= -->
+      include parts/modal-form
+    
+
+    script(src="./js/jquery-3.6.0.min.js")
+    script(src="./js/jquery.formstyler.min.js")
+    script(src="./js/swiper-bundle.min.js")
+    script(src="./js/fancybox.umd.js")
+    script(src="./js/imask.js")
+    script(src="./js/main.js")

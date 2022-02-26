@@ -1,0 +1,26 @@
+mixin hb-item(img, text)
+  .hero-branch__list-item
+    .hero-branch__item-img
+      img(src=img, alt="")
+    .hero-branch__item-desc=text
+
+section.hero-branch 
+  .container 
+    .breadcrumbs Главная >> решение задач >> #[a(href="javascript:void(0)") горнодобывающая отрасль]
+
+    .h1-title.green-line
+      h1 Сельскохозяйственная отрасль
+      p Мобильность, легкость, качество!
+    
+    .yellow-list
+      .yellow-list__item Животноводство 
+      .yellow-list__item Растениеводство
+
+    .hero-branch__list
+      +hb-item('img/hb-7.1.jpg', 'Транспортировка и внесение животноводческих стоков на поля ')
+      +hb-item('img/hb-1.4.jpg', 'Организация систем орошения, ирригации')
+      +hb-item('img/hb-1.9.jpg', 'Организация байпасных (резервных) линий')
+      +hb-item('img/hb-7.4.jpg', 'Подача воды для различных технологических нужд')
+      +hb-item('img/hb-1.8.jpg', 'Подача питьевой воды')
+      +hb-item('img/hb-7.5.jpg', 'Разгрузка транспортных средств для силоса ')
+      +hb-item('img/hb-7.6.jpg', 'Транспортировка сыпучей продукции при заготовке зерна')

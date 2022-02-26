@@ -1,0 +1,70 @@
+section.form
+  padding: 30px 0
+  background-color: var(--orange-01)
+
+  h2
+    text-align: center
+    margin-bottom: 70px
+    @media (max-width: 1350px)
+      margin-bottom: 50px
+    @media (max-width: 1060px)
+      display: none
+
+  .form__wrapper
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+
+    .form__desc
+      width: 620px
+      font-size: 28px
+      text-align: left
+      @media (max-width: 1060px)
+        display: block
+        width: 100%
+      @media (max-width: 340px)
+        font-size: 25px
+
+      br
+        display: none
+        @media (max-width: 380px)
+          display: block
+
+    .form__form
+      width: 380px
+      @media (max-width: 1060px)
+        width: 100%
+
+      form
+        display: flex
+        flex-direction: column
+        &.template
+          input:not([type=checkbox])
+            height: 35px
+            margin-bottom: 32px
+
+        input:not([type=checkbox])
+          width: 100%
+          border: none
+          background: transparent
+          border-bottom: 1px solid #000
+          font-feature-settings: 'pnum' on, 'lnum' on
+          outline: none
+
+        label
+          font-size: 12px
+          position: relative
+          padding-left: 25px
+
+        input[type=checkbox]
+          width: 20px
+          height: 20px
+          border: none
+          outline: none
+          position: absolute
+          left: 0
+          top: 0
+
+        .btn-orange
+          width: 100%
+          margin-top: 100px

@@ -1,0 +1,24 @@
+mixin hb-item(img, text)
+  .hero-branch__list-item
+    .hero-branch__item-img
+      img(src=img, alt="")
+    .hero-branch__item-desc=text
+
+section.hero-branch 
+  .container 
+    .breadcrumbs Главная >> решение задач >> #[a(href="javascript:void(0)") горнодобывающая отрасль]
+
+    .h1-title
+      h1 Жилищно-коммунальное хозяйство
+      p Promline выдерживает любые нагрузки!
+    
+    .yellow-list
+      .yellow-list__item Водопровод
+      .yellow-list__item Канализация
+
+    .hero-branch__list
+      +hb-item('img/hb-1.8.jpg', 'Подача питьевой воды')
+      +hb-item('img/hb-2.2.jpg', 'Организация байпасных (резервных) линий')
+      +hb-item('img/hb-1.3.jpg', 'Для восстановления изношенных систем водопроводов и канализации')
+      +hb-item('img/hb-2.4.jpg', 'Промывка канализации')
+      +hb-item('img/hb-2.5.jpg', 'Дренаж, обезвоживание канализаций, ливневых систем и пр.')

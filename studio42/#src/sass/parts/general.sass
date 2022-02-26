@@ -1,0 +1,179 @@
+*, *::before, *::after
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+html
+  scroll-behavior: smooth
+
+body
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif
+  color: #000
+  line-height: 150%
+  @media (max-width: 1350px)
+    130%
+
+.container
+  // border: 1px solid orange
+  width: 1100px
+  margin: 0 auto
+  @media (max-width: 1190px)
+    width: 1040px
+  @media (max-width: 1060px)
+    width: 90%
+
+  &-big
+    // border: 1px solid skyblue
+    width: 90%
+    max-width: 1683px
+    margin: 0 auto
+
+section
+  padding: 75px 0
+  @media (max-width: 1060px)
+    padding: 50px 0
+
+h2
+  font-weight: 900
+  font-size: 32px
+  line-height: 150%
+  letter-spacing: 0.05em
+  text-transform: uppercase
+  // @media (max-width: 1350px)
+  //   margin-bottom: 50px
+  @media (max-width: 1060px)
+    // margin-bottom: 50px
+    font-size: 24px
+
+  &.center
+    text-align: center
+
+h3
+  font-weight: 600
+  font-size: 24px
+  line-height: 29px
+  @media (max-width: 1350px)
+    font-size: 20px
+  @media (max-width: 1060px)
+    font-size: 24px
+
+h5
+  font-size: 16px
+  line-height: 150%
+  font-weight: 600
+
+ul
+  list-style: none
+
+a
+  text-decoration: none
+
+img
+  width: 100%
+
+.btn-orange
+  width: 265px
+  height: 60px
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  color: var(--orange)
+  border-radius: 30px
+  border: 1px solid var(--orange)
+  transition: all .2s ease
+  @media (max-width: 1060px)
+    color: #fff
+  @media (max-width: 769px)
+    width: 320px
+    margin: 0 auto
+    display: flex
+  @media (max-width: 340px)
+    width: 280px
+
+  &:hover
+    color: #fff
+    background-color: var(--orange)
+  &.fill
+    color: #fff
+    background-color: var(--orange)
+    box-shadow: 0px 4px 10px rgba(93, 109, 111, 0.2), 0px 1px 4px rgba(32, 35, 36, 0.15)
+    &:hover
+      color: var(--orange)
+      background-color: transparent
+      // box-shadow: none
+      // background-color: var(--orange-hover)
+
+.orange-dots
+  margin-top: 48px
+  @media (max-width: 769px)
+    margin-top: 32px
+  li
+    color: #000
+    margin-bottom: 32px
+    position: relative
+    padding-left: 15px
+    &:last-child
+      margin-bottom: 0
+    &::before
+      @include ba()
+      left: 0
+      top: calc(50% - 3px)
+      width: 6px
+      height: 6px
+      border-radius: 50%
+      background-color: var(--orange)
+    @media (max-width: 1320px)
+      margin-bottom: 16px
+    @media (max-width: 769px)
+      margin-bottom: 16px
+
+.hide-mob
+  @media (max-width: 769px)
+    display: none
+
+.orange
+  color: var(--orange)
+.orange-05
+  color: var(--orange-05)
+.orange-01
+  color: var(--orange-01)
+
+.slick-arrow
+  position: absolute
+  background: center / contain no-repeat url('../img/arrow.svg')
+  font-size: 0
+  width: 30px
+  height: 15px
+  bottom: -50px
+  border: none
+  cursor: pointer
+
+  &.slick-next
+    left: calc(55% - 15px)
+  &.slick-prev
+    left: calc(45% - 15px)
+    transform: rotate(180deg)
+
+.review-item
+  display: flex
+  flex-wrap: wrap
+  align-items: center
+  border-radius: 20px
+  box-shadow: var(--box-shadow)
+  // width: 570px
+  width: 100%
+  min-height: 200px
+  padding: 30px
+  margin: 55px auto 0
+  @media (max-width: 769px)
+    width: 100% !important
+
+  &-img
+    width: 50px
+    height: 50px
+    object-fit: cover
+    display: inline-block
+    margin-right: 16px
+  &-desc
+    margin-top: 16px
+    width: 100%

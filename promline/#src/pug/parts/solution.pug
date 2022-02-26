@@ -1,0 +1,21 @@
+mixin sl-item(img, title, links, id)
+  .solution__list-item(id=id)
+    .top-el 
+      .top-el__title!=title
+      .top-el__img
+        img(src=img, alt="")
+
+    .bottom-el
+      ul
+        each link in links
+          li 
+            a(href=link[1])!=link[0]
+
+section.solution
+  .container 
+    h2 Решение задач
+
+    .solution__list
+      +sl-item('img/sl-1.jpg', 'Шланги для <br> воды и абразива', [['Горнодобывающая отрасль', 'branch-1.html'], ['Жилищно-коммунальное хозяйство', 'branch-2.html'], ['Строительная отрасль', 'branch-3.html'], ['Ликвидация ЧС', 'branch-4.html']], 'solution-1')
+      +sl-item('img/sl-2.jpg', 'Шланги для нефти <br> и газа', [['Нефтегазовая отрасль', 'branch-5.html']], 'solution-2')
+      +sl-item('img/sl-3.jpg', 'шланги для сельского <br> хозяйства', [['Сельскохозяйственная отрасль', 'branch-7.html']], 'solution-3')

@@ -1,0 +1,247 @@
+section.my-account
+  color: var(--blue-middle)
+  position: relative
+  @media (max-width: 769px)
+    padding-bottom: 270px
+
+  .container
+    max-width: 770px
+  .my-account-title
+    margin-bottom: 50px
+    font-size: 24px
+    font-weight: 700
+    @media (max-width: 550px)
+      text-align: center
+  .btn-exit
+    margin-left: auto
+    display: block
+    margin-bottom: 40px
+    text-decoration: underline
+    cursor: pointer
+    color: var(--blue-middle)
+    @media (max-width: 769px)
+      margin: 0 0 -25px 0
+      font-size: 22px
+
+  .teach-contact br
+    display: none
+    @media (max-width: 550px)
+      display: block
+
+  .my-account-setting
+    display: flex
+    justify-content: space-between
+
+  .my-account-setting-left
+    @media (max-width: 550px)
+      width: 100%
+    .left-inner
+      display: flex
+      margin-right: 25px
+      @media (max-width: 550px)
+        width: 100%
+        align-items: center
+        flex-direction: column
+        // text-align: center
+        margin: 0
+      .avatar
+        margin-right: 25px
+        width: 180px
+        height: 180px
+        border-radius: 30px
+        background: var(--gray-light)
+        position: relative
+        overflow: hidden
+        @media (max-width: 550px)
+          margin-bottom: 15px
+          margin-right: 0
+          min-width: 220px
+          min-height: 220px
+        &:hover::before
+          color: var(--blue-middle)
+        &::before
+          @include ba()
+          content: 'загрузить'
+          cursor: pointer
+          color: var(--white)
+          bottom: 10px
+          left: 0
+          width: 100%
+          text-align: center
+          text-decoration: underline
+          transition: all .1s ease
+        img
+          width: 100%
+          height: 100%
+          object-fit: cover
+        input[type="file"]
+          position: absolute
+          bottom: 10px
+          opacity: 0
+      .personal-data
+        height: 100%
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+        font-size: 22px
+        font-weight: 500
+        & > div
+          padding: 0
+          display: block
+          margin-bottom: 10px
+          position: relative
+          // border: none
+          &.inst, &.whtsp
+            padding-bottom: 15px
+            @media (max-width: 550px)
+              &::before
+                width: 100%
+                text-align: center
+            &::before
+              @include ba()
+              bottom: 0
+              left: 0
+              color: red
+              font-size: 14px
+              font-weight: 300
+              color: var(--border-color)
+          &.inst
+            &::before
+              content: 'Instagarm'
+          &.whtsp
+            &::before
+              content: 'Whatsapp'
+          & > input
+            font-size: 22px
+            font-weight: 500
+            color: var(--blue-middle)
+            background: transparent
+            @media (max-width: 550px)
+              text-align: center
+            &:disabled
+              border: none
+
+    .my-account-setting-change
+      color: var(--white)
+      text-align: center
+      display: block
+      width: 120px
+      margin-left: 200px
+      height: 30px
+      border-radius: 12px
+      background: var(--blue-middle)
+      transition: all .1s ease
+      &:hover
+        opacity: .7
+      @media (max-width: 550px)
+        margin: 0 auto
+
+  .my-account-setting-right
+    @media (max-width: 769px)
+      position: absolute
+      bottom: 25px
+      width: 90%
+
+    .reg-date
+      text-align: right
+      margin-bottom: 10px
+      span
+        left: auto
+        right: 0
+    .change-log-pass
+      display: flex
+      flex-direction: column
+      input
+        height: 35px
+        font-size: 14px
+      button
+        width: 100%
+        height: 35px
+        border-radius: 12px
+        border: 1px solid var(--border-color)
+        color: var(--blue-middle)
+        background-color: var(--gray-light)
+        transition: all .2s ease
+        &:hover
+          color: var(--white)
+          background: var(--blue-middle)
+
+  .my-account-data
+    margin-top: 35px
+    font-weight: 300
+    @media (max-width: 550px)
+      line-height: 150%
+    & > p
+      margin-bottom: 25px
+      a
+        display: inline-block
+        margin-right: 5px
+        text-decoration: none
+        color: var(--blue-middle)
+        small
+          color: var(--gray-light)
+          font-weight: 300
+
+    .selected-course
+      @media (max-width: 550px)
+        margin-top: 45px
+      &-title
+        margin-bottom: 15px
+      &-list
+        .pay-state
+          margin-left: 25px
+          margin-bottom: 20px
+          display: flex
+          align-items: center
+          justify-content: center
+          min-width: 40px
+          min-height: 40px
+          cursor: pointer
+          border-radius: 12px
+          border: 1px solid var(--blue-middle)
+          position: relative
+          &::before
+            @include ba()
+            content: 'Оплатить'
+            bottom: -20px
+            left: calc(50% - 40px)
+            width: 80px
+            text-align: center
+            font-size: 14px
+          &::after
+            content: '?'
+            display: flex
+            align-items: center
+            justify-content: center
+            min-width: 40px
+            min-height: 40px
+            font-size: 24px
+          &.payed
+            cursor: auto
+            &::before
+              content: 'Оплачено'
+            &::after
+              content: ''
+              margin-top: -10px
+              background: center / contain no-repeat url('../img/checked.png')
+
+      .cancel-pay
+        margin-left: auto
+        display: block
+        width: 160px
+        height: 35px
+        color: var(--white)
+        font-size: 14px
+        border-radius: 12px
+        background: var(--blue-middle)
+        &:disabled
+          cursor: auto
+          color: #777
+          background: var(--gray-light)
+
+    .about
+      margin-top: 25px
+      &-title
+        margin-bottom: 15px
+      .birth-day
+        font-weight: 500

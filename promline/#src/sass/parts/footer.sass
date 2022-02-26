@@ -1,0 +1,61 @@
+footer
+  color: #fff
+  padding: 100px 0 80px
+  background: center / cover no-repeat url('../img/footer.jpg')
+  z-index: 12
+  @media (max-width: 1420px)
+    padding: 50px 0 40px
+
+  .wrapper
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    .we-soc
+    @media (max-width: 767px)
+      display: none
+      flex-direction: column
+      align-items: center
+
+  ul
+    width: 18%
+    @media (max-width: 767px)
+      width: 100%
+    li
+      &:first-child
+        a
+          cursor: auto
+          display: block
+          font-size: 20px
+          line-height: 26px
+          color: #FFC83B
+          margin-bottom: 22px
+      &:not(:first-child):hover
+        a
+          color: #fff
+
+      a
+        color: #ACACAC
+        font-size: 16px
+        font-weight: 300
+        line-height: 130%
+        display: block
+        margin-bottom: 18px
+        transition: var(--trans-2s)
+
+  .contacts
+    display: block
+
+  .tel-soc
+    margin-bottom: 40px
+
+  .social-list
+    margin-left: 0 !important
+  .number
+    &::before
+      display: none !important
+
+  .footer-logo
+    width: 240px
+    margin: 100px auto 0
+    @media (max-width: 767px)
+      margin-top: 60px

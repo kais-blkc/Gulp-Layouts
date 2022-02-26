@@ -1,0 +1,245 @@
+section.hero
+  margin-top: -100px
+  padding-top: 100px
+  padding-bottom: 0
+  position: relative
+  z-index: 1
+  overflow: hidden
+  min-height: 50vh
+  font-size: 18px
+  &::before
+    @include ba()
+    width: 60%
+    height: 100%
+    top: 0
+    left: 0
+    background: center / cover no-repeat url('../img/hero-bg.jpg')
+    z-index: -1
+    @media (max-width: 1060px)
+      width: 100%
+
+  .author-burger
+    display: flex
+    align-items: center
+    justify-content: space-between
+    width: 100%
+    @media (max-width: 340px)
+      justify-content: space-around
+  .burger
+    display: none
+    @media (max-width: 1060px)
+      width: 50px
+      height: 50px
+      display: flex
+      align-items: center
+      justify-content: center
+      --burger-bg: var(--white)
+      &-line
+        width: 100%
+        height: var(--burger-height)
+        background-color: var(--burger-bg)
+        border-radius: 3px
+        position: relative
+        --distance: -15px
+        --burger-height: 6px
+        &::before, &::after
+          @include ba()
+          width: 100%
+          border-radius: 3px
+          height: var(--burger-height)
+          background-color: var(--burger-bg)
+        &::before
+          top: var(--distance)
+        &::after
+          bottom: var(--distance)
+    @media (max-width: 340px)
+      width: 35px
+      height: 35px
+      &-line
+        --distance: 12px
+
+  .container
+    display: flex
+    flex-wrap: wrap
+    align-items: flex-end
+    justify-content: space-between
+
+    .hero-left
+      width: 60%
+      margin-top: 120px
+      color: var(--white)
+      @media (max-width: 1060px)
+        width: 100%
+        text-align: center
+        display: flex
+        align-items: center
+        flex-direction: column
+        margin-top: 150px
+      @media (max-width: 768px)
+        margin-top: 120px
+
+      .author-curse
+        font-size: 20px
+        text-transform: uppercase
+        span
+          display: block
+          font-size: 1.4em
+        @media (max-width: 1060px)
+          text-align-last: left
+        @media (max-width: 550px)
+          font-size: 16px
+        @media (max-width: 340px)
+          text-align-last: left
+          margin-left: -15px
+      .how-start
+        line-height: 100%
+        margin-top: 40px
+        font-size: 56px
+        @media (max-width: 1060px)
+          font-size: 50px
+          br.mob
+            display: block
+        @media (max-width: 340px)
+          font-size: 32px
+        .zero
+          display: inline-block
+          font-size: 1.5em
+        span
+          display: block
+        br.mob
+          display: none
+      .desc
+        font-weight: 500
+        margin-top: 40px
+        @media (max-width: 1060px)
+          display: none
+        p
+          margin-bottom: 20px
+          max-width: 440px
+      .oferta
+        text-transform: uppercase
+        opacity: .2
+        font-size: 14px
+        margin-top: 25px
+        margin-bottom: 10px
+        margin-left: 20px
+        @media (max-width: 1060px)
+          color: var(--blue)
+          opacity: .9
+          margin-left: 65px
+          font-size: 12px
+          text-align: left
+        @media (max-width: 550px)
+          font-size: 10px
+          margin-left: 35px
+        @media (max-width: 340px)
+          font-size: 8px
+          margin-left: 55px
+      .btn-oferta
+        @media (max-width: 1060px)
+          position: absolute
+          bottom: 0
+          z-index: 3
+
+    .hero-right
+      width: 600px
+      position: absolute
+      left: 51%
+      @media (max-width: 1270px)
+        left: 42%
+      @media (max-width: 1060px)
+        width: 100%
+        position: relative
+        left: 0
+        margin: 0 auto
+
+      .mans
+        position: relative
+
+        .mans-img
+          width: 600px
+          object-fit: contain
+          display: block
+          @media (max-width: 1060px)
+            width: 480px
+            margin: 0 auto
+          @media (max-width: 550px)
+            width: 400px
+            margin-left: -20px
+          @media (max-width: 340px)
+            width: 320px
+
+        .live
+          width: 110px
+          position: absolute
+          top: 12%
+          &:first-child
+            left: 0px
+          &:last-child
+            right: 0px
+          @media (max-width: 1060px)
+            &:first-child
+              left: calc(50% - 280px)
+              top: -100px
+            &:last-child
+              top: -100px
+              right: calc(50% - 280px)
+          @media (max-width: 769px)
+            width: 70px
+            &:first-child
+              left: calc(50% - 130px)
+              top: -110px
+            &:last-child
+              top: -110px
+              right: calc(50% - 130px)
+          @media (max-width: 340px)
+            width: 50px
+            &:first-child
+              left: calc(50% - 100px)
+              top: -75px
+            &:last-child
+              top: -75px
+              right: calc(50% - 100px)
+
+        .name
+          width: 90px
+          font-size: 13px
+          font-weight: 500
+          line-height: 16px
+          position: absolute
+          bottom: 10px
+          &:first-child
+            color: var(--white)
+            left: -0px
+            text-align: right
+          &:last-child
+            color: var(--blue)
+            right: -20px
+          @media (max-width: 1060px)
+            &:first-child
+              top: 80px
+              left: calc(50% - 240px)
+              bottom: auto
+            &:last-child
+              color: var(--white)
+              top: 80px
+              right: calc(50% - 240px)
+              bottom: auto
+          @media (max-width: 550px)
+            opacity: .4
+            &:first-child
+              top: 60px
+              left: calc(50% - 200px)
+            &:last-child
+              color: var(--white)
+              top: 60px
+              right: calc(50% - 200px)
+          @media (max-width: 340px)
+            font-size: 8px
+            width: 50px
+            &:first-child
+              top: 40px
+              left: calc(50% - 140px)
+            &:last-child
+              top: 40px
+              right: calc(50% - 140px)

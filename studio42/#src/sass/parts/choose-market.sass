@@ -1,0 +1,129 @@
+section.choose-market
+
+  h2
+    @media (max-width: 1060px)
+      text-align: center
+
+  .choose-market__desc
+    display: none
+    margin-bottom: 48px
+    ul li
+      margin-top: 24px
+    @media (max-width: 1060px)
+      display: block
+    @media (max-width: 769px)
+      width: 100%
+
+  .choose-market__list
+    margin-top: 70px
+    display: flex
+    flex-wrap: wrap
+    align-items: flex-start
+    justify-content: space-between
+    @media (max-width: 1060px)
+      justify-content: center
+
+    &-item
+      width: 30%
+      border-radius: 30px
+      border: 1px solid #000
+      overflow: hidden
+      text-align: center
+      @media (max-width: 1350px)
+        line-height: 130%
+      @media (max-width: 1060px)
+        width: 550px
+        margin-bottom: 32px
+
+      &.main > div:nth-child(odd)
+        background-color: var(--orange-05)
+
+      & > div
+        padding: 16px
+        border-bottom: 1px solid #000
+
+        &:nth-child(odd)
+          background-color: var(--orange-01)
+        &:last-child
+          border: none
+
+      .market-name
+        padding: 28px 0
+        @media (max-width: 1350px)
+          padding: 15px 0
+
+      .market-price
+        padding: 16px 0 10px
+        del
+          margin-bottom: 15px
+          font-size: 28px
+          line-height: 34px
+          text-align: center
+          @media (max-width: 1350px)
+            font-size: 18px
+        p
+          font-size: 48px
+          line-height: 59px
+          @media (max-width: 1350px)
+            font-size: 36px
+            margin-top: -15px
+
+      .market-list
+        text-align: left
+        ul
+          margin-top: 15px
+          @media (max-width: 1350px)
+            margin-top: 10px
+        li
+          position: relative
+          display: flex
+          margin-bottom: 8px
+          &::before
+            content: ''
+            display: block
+            min-width: 2px
+            min-height: 2px
+            max-width: 2px
+            max-height: 2px
+            background-color: #000
+            border-radius: 50%
+            margin-top: 10px
+            margin-right: 10px
+
+      .market-present
+        text-align: left
+        @media (max-width: 769px)
+          margin-top: 16px
+
+        li
+          position: relative
+          padding-left: 45px
+          min-height: 38px
+          margin-bottom: 16px
+          @media (max-width: 769px)
+            &::before
+              min-width: 32px
+              min-height: 34px
+
+          &::before
+            @include ba()
+            min-width: 36px
+            min-height: 38px
+            background: center / contain no-repeat url('../img/surprice.svg')
+            left: 0
+
+          .orange-05
+            text-decoration: line-through
+
+      .btn-orange
+        margin-top: 20px
+        height: 60px
+        width: 100%
+        font-size: 24px
+        @media (max-width: 769px)
+          font-size: 16px
+
+      .installment
+        margin: 10px 0 5px
+        opacity: .7
+        text-align: left

@@ -1,0 +1,226 @@
+section.cart-main
+  color: var(--blue-middle)
+  --placeholder-color: #afafaf
+
+  button
+    border: none
+    cursor: pointer
+    background: transparent
+    color: var(--blue-middle)
+    &:hover
+      opacity: .5
+
+  .container
+    max-width: 770px
+
+  .cart-title
+    font-size: 24px
+    font-weight: 700
+    margin-bottom: 55px
+
+  .cart-list
+    &-item
+      width: 100%
+      display: flex
+      justify-content: space-between
+      margin-bottom: 15px
+      &-detail
+        width: 95%
+        padding: 15px 25px
+        display: flex
+        align-items: center
+        justify-content: space-between
+        border-radius: 10px
+        border: 1px solid var(--blue-middle)
+        @media (max-width: 340px)
+          width: 90%
+        .name
+          margin-right: 20px
+          font-size: 18px
+          line-height: 30px
+          @media (max-width: 550px)
+            font-size: 16px
+            line-height: 20px
+          span
+            font-weight: 500
+        .price
+          font-size: 24px
+          @media (max-width: 550px)
+            font-size: 18px
+
+      .btn-close
+        color: #acadad
+        font-size: 20px
+        padding: 0
+
+  .common
+    margin-top: 20px
+    width: 95%
+    display: flex
+    align-items: center
+    justify-content: space-between
+    .add-more
+      font-size: 18px
+      @media (max-width: 550px)
+        text-align: right
+        max-width: 150px
+    .common-price
+      font-size: 22px
+      @media (max-width: 550px)
+        font-size: 18px
+        span
+          display: block
+
+  form
+    margin-top: 40px
+
+    .contacts
+      &-title
+        margin-bottom: 20px
+        @media (max-width: 1060px)
+          font-size: 24px
+        @media (max-width: 550px)
+          font-size: 20px
+      .contacts-wrapper
+        display: flex
+        @media (max-width: 340px)
+          flex-direction: column
+        .inputs
+          width: 85%
+          display: flex
+          flex-wrap: wrap
+          align-items: center
+          justify-content: space-between
+          @media (max-width: 769px)
+            flex-direction: column
+          @media (max-width: 340px)
+            width: 100%
+          input
+            margin-bottom: 20px
+            padding: 0 15px
+            height: 50px
+            width: 48%
+            border-radius: 12px
+            border: 1px solid var(--blue-middle)
+            color: var(--blue-middle)
+            font-size: 20px
+            outline: none
+            &::placeholder
+              color: var(--placeholder-color)
+            @media (max-width: 769px)
+              width: 100%
+        .new-user
+          width: 50px
+          height: 50px
+          display: flex
+          margin-left: 45px
+          position: relative
+          @media (max-width: 340px)
+            margin-left: 0
+          &::before
+            content: ''
+            position: absolute
+            right: 0
+            top: 0
+            display: block
+            width: 50px
+            height: 50px
+            cursor: pointer
+            border-radius: 12px
+            border: 1px solid var(--blue-middle)
+          &::after
+            content: 'Новый пользователь'
+            font-size: 10px
+            text-align: right
+            position: absolute
+            bottom: -30px
+            right: 0
+            color: var(--placeholder-color)
+            @media (max-width: 340px)
+              text-align: left
+              left: 0
+              right: auto
+
+          input
+            position: absolute
+            opacity: 0
+
+        .new-user input:checked + .check
+          display: block
+
+    .pay-methods
+      &-title
+        margin-bottom: 25px
+        @media (max-width: 1060px)
+          font-size: 24px
+          margin-top: 35px
+        @media (max-width: 550px)
+          font-size: 20px
+          margin-top: 65px
+      .pay-methods-list
+        display: flex
+        align-items: center
+        @media (max-width: 1060px)
+          flex-wrap: wrap
+          justify-content: center
+
+        &-item
+          margin-right: 15px
+          min-width: 80px
+          height: 50px
+          border-radius: 5px
+          border: 1px solid var(--border-color)
+          cursor: pointer
+          display: flex
+          align-items: center
+          transition: all .3s ease
+          &:last-child
+            min-width: 300px
+            margin: 0
+            img
+              width: 30%
+              height: 80%
+          &:hover
+            background-color: #dfdfdf
+          @media (max-width: 1060px)
+            margin-bottom: 10px
+          img
+            width: 100%
+            height: 100%
+            object-fit: contain
+          span
+            font-size: 14px
+
+    .form-submit
+      margin-top: 50px
+      width: 95%
+      display: flex
+      align-items: flex-end
+      justify-content: space-between
+      @media (max-width: 1060px)
+        width: 100%
+        flex-direction: column
+        align-items: center
+        text-align: center
+      .accept
+        margin-right: 15px
+        @media (max-width: 1060px)
+          margin-bottom: 25px
+          font-size: 24px
+        @media (max-width: 550px)
+          font-size: 18px
+        label
+          opacity: .7
+          font-weight: 300
+      .submit
+        min-width: 200px
+        height: 50px
+        color: #fff
+        font-size: 21px
+        font-weight: 700
+        text-transform: uppercase
+        border-radius: 10px
+        background: var(--blue-middle)
+        transition: all .2s ease
+        &:hover
+          opacity: .8

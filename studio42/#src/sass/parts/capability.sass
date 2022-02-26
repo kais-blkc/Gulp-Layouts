@@ -1,0 +1,152 @@
+section.capability
+  padding: 100px 0 105px
+  @media (max-width: 1550px)
+    padding-bottom: 145px
+  @media (max-width: 1060px)
+    padding: 65px 0 0
+  @media (max-width: 769px)
+    padding: 65px 0
+
+  .container
+    display: flex
+    align-items: center
+    flex-direction: column
+
+  h2
+    @media (min-width: 769px)
+      br
+        display: none
+
+  .capability__list
+    margin-top: 140px
+    width: 600px
+    height: 600px
+    position: relative
+    background: center / contain no-repeat url('../img/half-circle.svg')
+    @media (max-width: 1550px)
+      width: 450px
+      height: 450px
+    @media (max-width: 1300px)
+      margin-left: -150px
+    @media (max-width: 1150px)
+      margin-left: -220px
+    @media (max-width: 1060px)
+      width: 100%
+      height: auto
+      background: none
+      margin: 50px 0 0
+      display: flex
+      align-items: center
+      flex-direction: column
+
+    &::before
+      @include ba()
+      width: 540px
+      height: 540px
+      background: center / contain no-repeat url('../img/capability.png')
+      @media (max-width: 1550px)
+        width: 420px
+        height: 420px
+      @media (max-width: 1060px)
+        height: 320px
+        position: relative
+        order: 1
+      @media (max-width: 769px)
+        width: 320px
+        height: 240px
+
+    &::after
+      @include ba()
+      content: 'Более \0a 300 \0a интеграций'
+      white-space: pre
+      font-weight: 900
+      font-size: 64px
+      line-height: 120%
+      opacity: 0.6
+      color: #fff
+      mix-blend-mode: multiply
+      -webkit-text-fill: transparent
+      text-shadow: 0 0 1px rgba(0,0,0,1), 0 0 1px rgba(0,0,0,1)
+      top: 310px
+      left: -150px
+      @media (max-width: 1550px)
+        font-size: 52px
+        top: 230px
+        left: -120px
+      @media (max-width: 1060px)
+        order: 2
+        position: relative
+        top: -137px
+        left: -150px
+      @media (max-width: 769px)
+        content: 'Более 300 \0a интеграций'
+        font-size: 40px
+        top: -20px
+        left: -20px
+
+    &-item
+      width: 460px
+      position: absolute
+      right: 0
+      top: 0
+      @media (max-width: 1550px)
+        width: 400px
+      @media (max-width: 1060px)
+        width: 75%
+        display: flex
+        align-items: center
+        transform: translate(0,0) !important
+        position: relative
+        margin-bottom: 25px
+        &::before
+          content: ''
+          margin-right: 15px
+          display: block
+          min-width: 35px
+          min-height: 35px
+          background: center / contain no-repeat url('../img/check.svg')
+        br
+          display: none
+
+      @media (max-width: 769px)
+        width: 100%
+
+      &:nth-child(1)
+        transform: translate(160px, -50px)
+        @media (max-width: 1550px)
+          transform: translate(176px,-57px)
+
+      &:nth-child(2)
+        transform: translate(330px, 0px)
+        @media (max-width: 1550px)
+          transform: translate(333px,0)
+
+      &:nth-child(3)
+        transform: translate(430px, 110px)
+        @media (max-width: 1550px)
+          transform: translate(390px,90px)
+
+      &:nth-child(4)
+        transform: translate(470px, 230px)
+        @media (max-width: 1550px)
+          transform: translate(410px,160px)
+
+      &:nth-child(5)
+        transform: translate(470px, 340px)
+        @media (max-width: 1550px)
+          transform: translate(370px,350px)
+
+      &:nth-child(6)
+        transform: translate(430px, 460px)
+        @media (max-width: 1550px)
+          transform: translate(410px,260px)
+
+      &:nth-child(7)
+        transform: translate(330px, 550px)
+        @media (max-width: 1550px)
+          transform: translate(300px,410px)
+
+      &:nth-child(8)
+        transform: translate(160px, 610px)
+        @media (max-width: 1550px)
+          transform: translate(170px,470px)

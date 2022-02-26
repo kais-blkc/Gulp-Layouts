@@ -1,0 +1,41 @@
+section.price
+  padding: 140px 0
+  text-align: center
+  background: var(--orange-01)
+  @media (max-width: 1320px)
+    padding: 80px 0
+
+  .container
+  .price__list-item
+    margin-bottom: 90px
+    display: flex
+    align-items: center
+    flex-direction: column
+    &:last-child
+      margin-bottom: 0
+    &:nth-child(5)
+      .price-icon
+        width: 52px
+
+    @media (max-width: 1320px)
+      margin-bottom: 60px
+
+    .price-icon
+      width: 35px
+      margin-bottom: 15px
+
+    .price-title
+      margin-bottom: 15px
+      font-size: 32px
+      font-weight: 600
+      line-height: 150%
+      @media (max-width: 1320px)
+        font-size: 26px
+      @media (max-width: 769px)
+        font-size: 24px
+        font-weight: 400
+
+    .price-desc
+      line-height: 150%
+      color: rgba(0,0,0,.7)
+      max-width: 570px

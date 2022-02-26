@@ -1,0 +1,73 @@
+mixin category-item(h1, items, color)
+  .h1-title.yellow-line
+    h1!=h1
+
+  .products-list
+    each item in items
+      div(class="products-list__item " + item[2])
+        .products-list__item-title!=item[0]
+        .products-list__item-img
+          img(src=item[1], alt="")
+        button.products-list__item-btn.yellow-btn Подробнее
+
+        .products-list__item-more
+          .products-list__item-title!=item[0]
+          ul
+            li
+              a(href="single.html") Название соединения
+              .img
+                img(src="img/p-1.png", alt="")
+            li
+              a(href="single.html") Название соединения
+              .img
+                img(src="img/p-2.png", alt="")
+            li
+              a(href="single.html") Название соединения
+              .img
+                img(src="img/p-3.png", alt="")
+            li
+              a(href="single.html") Название соединения
+              .img
+                img(src="img/p-4.png", alt="")
+
+<!DOCTYPE html>
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Cordtec
+    link(rel="stylesheet", href="./css/style.min.css")
+    link(rel="stylesheet", href="./css/jquery.formstyler.theme.css")
+    link(rel="stylesheet", href="./css/jquery.formstyler.css")
+    link(rel="stylesheet", href="./css/swiper-bundle.min.css")
+  body
+
+    include parts/header
+
+    main
+      section.products.yellow-lines
+        .container 
+          .breadcrumbs Главная >> #[a(href="#") каталог]
+
+          +category-item('Шланги', [['Напорные <br> плоскосворачиваемые <br> TPU', 'img/p-1.png', 'red']])
+          +category-item('Соединения', [['Быстроразъемные', 'img/p-2.png', 'yellow'], ['Ремонтные', 'img/p-3.png', 'blue'], ['хомуты', 'img/p-4.png', 'green']])
+          +category-item('Намоточное оборудование', [['УН 89-300', 'img/p-5.png', 'blue'], ['УН 50-400', 'img/p-6.png', 'yellow']])
+
+          .products-list
+            .products-list__item__soon
+              .products-list__item-title Каталог скоро пополнится
+              img(src="img/p-1.png", alt="")
+
+
+    <!-- Footer ============= -->
+    include parts/footer
+
+      <!-- Global Els ============= -->
+      include parts/modal-form
+    
+
+    script(src="./js/jquery-3.6.0.min.js")
+    script(src="./js/jquery.formstyler.min.js")
+    script(src="./js/swiper-bundle.min.js")
+    script(src="./js/imask.js")
+    script(src="./js/main.js")

@@ -1,0 +1,138 @@
+section.before-after
+  position: relative
+  color: var(--white)
+  overflow: hidden
+  z-index: 1
+  &::before
+    @include ba()
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    transform: rotateY(180deg)
+    background: center / cover no-repeat url(../img/present-bg.jpg)
+    z-index: -1
+
+  .container
+    display: flex
+    justify-content: space-between
+    @media (max-width: 1060px)
+      flex-direction: column
+      align-items: center
+
+  .before-after-title
+    font-size: 26px
+    font-weight: 700
+    text-align: center
+    @media (max-width: 1060px)
+      font-size: 32px
+      text-align: left
+      max-width: 440px
+      margin: 0 auto
+      br
+        display: block
+    @media (max-width: 550px)
+      font-size: 26px
+      max-width: 100%
+      text-align: center
+    br
+      display: none
+    span
+      font-size: 1.1em
+      text-transform: uppercase
+  img
+    width: 100%
+
+  .before
+    width: 40%
+    @media (max-width: 1060px)
+      width: 500px
+      margin-bottom: 75px
+    @media (max-width: 550px)
+      width: 100%
+  .after
+    width: 55%
+    position: relative
+    @media (max-width: 1060px)
+      width: 500px
+    @media (max-width: 550px)
+      width: 100%
+    .before-after-title
+      margin-left: 85px
+      @media (max-width: 1060px)
+        margin-left: 120px
+      @media (max-width: 550px)
+        margin-bottom: 35px
+        margin-left: 0
+    img
+      margin-top: -50px
+      @media (max-width: 550px)
+        width: 115%
+    .after-list
+      &-item
+        width: 200px
+        padding-left: var(--check-padding)
+        font-size: 20px
+        line-height: 100%
+        text-transform: uppercase
+        position: absolute
+        top: 0
+        --check-size: 25px
+        --check-padding: calc(var(--check-size) + 5px)
+        &::before
+          @include ba()
+          left: 0
+          top: 0
+          width: var(--check-size)
+          height: var(--check-size)
+          background: center / contain no-repeat url('../img/check.png')
+        &:nth-child(1)
+          right: 60px
+          top: 110px
+        &:nth-child(2)
+          right: -10px
+          top: 310px
+          &::before
+            top: calc(50% - var(--check-size) / 2)
+        &:nth-child(3)
+          right: 0
+          top: 430px
+        &:nth-child(4)
+          left: -90px
+          top: 350px
+          text-align: right
+          padding-left: 0
+          padding-top: var(--check-padding)
+          &::before
+            left: auto
+            right: 0
+        @media (max-width: 1060px)
+          &:nth-child(2)
+            display: none
+        @media (max-width: 550px)
+          font-size: 16px
+          max-width: 160px
+          &:nth-child(1)
+            right: 0
+          &:nth-child(3)
+            top: auto
+            bottom: 10px
+          &:nth-child(4)
+            left: -75px
+            top: auto
+            bottom: 10px
+        @media (max-width: 340px)
+          font-size: 12px
+          max-width: 140px
+          word-break: break-word
+          --check-size: 15px
+          &:nth-child(3)
+            right: -15px
+          &:nth-child(4)
+            left: -60px
+            color: negative
+            bottom: 40px
+            max-width: 120px
+
+        span
+          text-transform: none

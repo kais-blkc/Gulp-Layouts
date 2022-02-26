@@ -1,0 +1,66 @@
+section.top-studio
+  padding: 150px 0
+  background: var(--orange-01)
+  @media (max-width: 1350px)
+    padding: 100px 0
+  @media (max-width: 1350px)
+    padding: 75px 0
+
+  h2
+    text-align: center
+
+  .top-studio__list
+    margin-top: 70px
+    @media (max-width: 1350px)
+      margin-top: 70px
+
+    &-item
+      margin-bottom: 32px
+      display: flex
+      align-items: center
+      justify-content: space-between
+      @media (max-width: 1350px)
+        justify-content: center
+      @media (max-width: 769px)
+        flex-direction: column
+        margin-bottom: 48px
+
+      &:nth-child(even)
+        flex-direction: row-reverse
+        .top-studio__item-text
+          text-align: left
+          margin-left: 35px
+          margin-right: 0
+        @media (max-width: 769px)
+          flex-direction: column
+
+      &:last-child
+        .top-studio__item-img
+          display: flex
+          flex-wrap: wrap
+          justify-content: space-between
+
+          img
+            width: 48%
+            margin-bottom: 4%
+            @media (max-width: 769px)
+              width: 100%
+
+      .top-studio__item-text
+        width: 48%
+        font-size: 24px
+        line-height: 150%
+        @media (max-width: 1350px)
+          margin-right: 35px
+          font-size: 20px
+          text-align: right
+        @media (max-width: 769px)
+          width: 100%
+          font-size: 24px
+          text-align: center !important
+          margin: 0 0 24px 0!important
+
+      .top-studio__item-img
+        width: 48%
+        @media (max-width: 769px)
+          width: 100%

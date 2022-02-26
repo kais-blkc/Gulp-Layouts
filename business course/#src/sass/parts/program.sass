@@ -1,0 +1,78 @@
+section.program
+  color: var(--blue-middle)
+  padding-top: 15px
+
+  .container
+    padding: 25px
+    border-radius: 30px
+    border: 1.5px solid var(--border-color)
+
+  .program-title
+    font-size: 26px
+    font-weight: 700
+    text-align: center
+    @media (max-width: 769px)
+      font-size: 42px
+    @media (max-width: 550px)
+      font-size: 26px
+    @media (max-width: 340px)
+      font-size: 20px
+
+  .program-list
+    counter-reset: program-item
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    &-item
+      margin-top: 40px
+      width: 32%
+      display: flex
+      align-items: center
+      font-size: 15px
+      counter-increment: program-item
+      &:first-child, &:last-child
+        &::before
+          background-color: #d4e0ea
+      @media (max-width: 1060px)
+        width: 48%
+      @media (max-width: 769px)
+        width: 100%
+        font-size: 26px
+        line-height: 40px
+        &::before
+          border-radius: 20px
+          min-width: 100px
+          min-height: 100px
+          font-size: 90px
+      @media (max-width: 550px)
+        font-size: 16px
+        line-height: 140%
+        &::before
+          border-radius: 20px
+          min-width: 50px
+          min-height: 50px
+          font-size: 40px
+      @media (max-width: 340px)
+        font-size: 14px
+        &::before
+          min-width: 40px
+          min-height: 40px
+          border-radius: 10px
+          font-size: 28px
+      &::before
+        content: counter(program-item)
+        margin-right: 10px
+        min-width: 55px
+        min-height: 55px
+        display: flex
+        align-items: center
+        justify-content: center
+        color: #fff
+        font-size: 42px
+        font-weight: 300
+        border-radius: 50%
+        background-color: #ececec
+
+      span
+        font-weight: 700
+        display: inline

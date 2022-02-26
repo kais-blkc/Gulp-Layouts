@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Корзина</title>
+    <link rel="stylesheet" href="./css/style.min.css"/>
+  </head>
+  <body>
+    <header class="cart">
+      <div class="container"> 
+        <div class="author">АВТОРСКИЙ КУРС <span>ИВАНА БАКУРОВА</span></div>
+        <div class="business-zero">БИЗНЕС С <span class="zero">0</span> НА ЛЮБИМОМ ДЕЛЕ</div>
+      </div>
+    </header>
+    <main>
+      <section class="my-account">
+        <div class="container">
+          <form class="my-account-setting">
+            <div class="my-account-setting-left">
+              <div class="my-account-title">Личный кабинет</div>
+              <div class="left-inner">
+                <div class="avatar"> 
+                  <input type="file" accept="image/jpeg" placeholder="download"/>
+                </div>
+                <div class="personal-data">
+                  <div class="name"> 
+                    <input type="text" name="name" value="Иван Иванов" disabled="disabled"/>
+                  </div>
+                  <div class="email"> 
+                    <input type="text" name="email" value="Ivanov@maill.com" disabled="disabled"/>
+                  </div>
+                  <div class="inst plhldr-span">
+                    <input type="text" name="inst" value="@Ivanov_om" disabled="disabled"/>
+                  </div>
+                  <div class="whtsp plhldr-span">
+                    <input type="text" name="whtsp" value="+7 900 000 00 00" disabled="disabled"/>
+                  </div>
+                </div>
+              </div>
+              <button class="my-account-setting-change" type="button" id="my-account-setting-change">Изменить</button>
+            </div>
+            <div class="my-account-setting-right">
+              <button class="btn-exit">Выйти</button>
+              <div class="reg-date plhldr-span">01.09.2021<span>дата регистрации</span></div>
+              <div class="change-log-pass inputs-blue">
+                <input type="text" placeholder="Логин"/>
+                <input type="text" placeholder="Пароль"/>
+                <button>Изменить данные</button>
+              </div>
+            </div>
+          </form>
+          <div class="my-account-data">
+            <p class="light-medium">Ваш персональный номер ученика: <span>1002304</span></p>
+            <p class="light-medium teach-contact">Контакты куратора: Иван Бакуров <br/>  <span><a href="#">@iVan_Kurator <small>Instagram</small></a></span><span><a href="#">@iVan_Kurator <small>Telegram</small></a></span></p>
+            <div class="selected-course">
+              <div class="selected-course-title">Выбранный курс:</div>
+              <div class="selected-course-list">
+                <div class="selected-course-item cart-product-item">
+                  <p>Как запустить свой бизнес с 0 пакет <span>“ЖИВОЙ”</span></p>
+                  <div class="pay-state payed"></div>
+                </div>
+                <div class="selected-course-item cart-product-item">
+                  <p>Как запустить свой бизнес с 0 пакет <span>“ЖИВОЙ”</span></p>
+                  <div class="pay-state"></div>
+                </div>
+              </div>
+              <button class="cancel-pay" disabled="disabled">Отказ от оплаты</button>
+            </div>
+            <div class="about">
+              <div class="about-title">О себе:</div>
+              <div class="birth-day plhldr-span">01.09.2021 <span>дата рождения</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="cart"> 
+      <div class="container">
+        <div class="text"> 
+          <p>ИП Бакуров Иван Анатольевич</p>
+          <p>г. Санкт-Петербург ОРГНИП 0000000000</p>
+        </div>
+        <div class="footer-contacts"> <a class="number" href="#">+7 (900) 000-00-00</a>
+          <div class="soc-list"> <a class="soc-list-item" href="#"> <img src="img/inst.png" alt=""/></a><a class="soc-list-item" href="#"> <img src="img/tlgrm.png" alt=""/></a><a class="soc-list-item" href="#"> <img src="img/whtsp.png" alt=""/></a></div>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

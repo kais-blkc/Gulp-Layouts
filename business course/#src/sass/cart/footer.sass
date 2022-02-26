@@ -1,0 +1,25 @@
+footer.cart
+  background: top center / cover no-repeat url('../img/present-bg.jpg')
+
+  .container
+    display: flex
+    align-items: flex-end
+    justify-content: space-between
+    text-align: left
+    @media (max-width: 1060px)
+      flex-direction: column-reverse
+      align-items: center
+      text-align: center
+
+  .footer-contacts
+    display: flex
+    align-items: flex-end
+    @media (max-width: 1060px)
+      align-items: center
+    @media (max-width: 550px)
+      flex-direction: column
+    .number
+      margin-top: 0
+      margin-right: 25px
+      @media (max-width: 550px)
+        font-size: 22px

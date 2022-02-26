@@ -1,0 +1,17 @@
+mixin ql-item(img, text)
+  .quality__list-item
+    .quality__item-img
+      img(src=img, alt="")
+    .quality__item-text!=text
+
+section.quality
+  .container 
+    h2 Качество
+
+    .quality__list
+      +ql-item('img/ql-1.svg', 'Широкий выбор размеров. Диаметры от 50 до 400 мм.')
+      +ql-item('img/ql-2.svg', 'Диапазон выдерживаемых температур <br> от -70 ˚С до +80 ˚С;')
+      +ql-item('img/ql-3.svg', 'Длина одного отрезка шланга до 200 метров')
+      +ql-item('img/ql-4.svg', 'Спокойно выдерживают давление до 84 Bar')
+      +ql-item('img/ql-5.svg', 'Небольшие габариты позволяют экономить на доставке')
+      +ql-item('img/ql-6.svg', 'Срок службы более 10 лет')

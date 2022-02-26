@@ -1,0 +1,51 @@
+section.my-account
+  .container
+      
+    
+    form.my-account-setting
+      .my-account-setting-left
+        .my-account-title Личный кабинет
+        .left-inner
+          .avatar 
+            input(type="file" accept="image/jpeg" placeholder="download")
+            //- img(src="img/present-bg.jpg", alt="")
+          .personal-data
+            .name 
+              input(type="text" name="name" value="Иван Иванов" disabled)
+            .email 
+              input(type="text" name="email" value="Ivanov@maill.com" disabled) 
+            .inst.plhldr-span
+              input(type="text" name="inst" value="@Ivanov_om" disabled)
+            .whtsp.plhldr-span
+              input(type="text" name="whtsp" value="+7 900 000 00 00" disabled)
+        button(type="button").my-account-setting-change#my-account-setting-change Изменить
+      .my-account-setting-right
+        button.btn-exit Выйти
+        .reg-date.plhldr-span 01.09.2021
+          span дата регистрации
+        .change-log-pass.inputs-blue
+          input(type="text" placeholder="Логин")
+          input(type="text" placeholder="Пароль")
+          button Изменить данные
+
+    .my-account-data
+      p.light-medium Ваш персональный номер ученика: #[span 1002304]
+      p.light-medium.teach-contact Контакты куратора: Иван Бакуров #[br]  
+        span #[a(href="#") @iVan_Kurator #[small Instagram]]
+        span #[a(href="#") @iVan_Kurator #[small Telegram]]
+
+      .selected-course
+        .selected-course-title Выбранный курс:
+        .selected-course-list
+          .selected-course-item.cart-product-item
+            p Как запустить свой бизнес с 0 пакет #[span “ЖИВОЙ”]
+            .pay-state.payed
+          .selected-course-item.cart-product-item
+            p Как запустить свой бизнес с 0 пакет #[span “ЖИВОЙ”]
+            .pay-state
+
+        button(disabled).cancel-pay Отказ от оплаты
+
+      .about
+        .about-title О себе:
+        .birth-day.plhldr-span 01.09.2021 #[span дата рождения]

@@ -1,0 +1,13 @@
+mixin opl-item(img)
+  .our-partners__list-item
+    img(src=img, alt="")
+
+section.our-partners
+  .container 
+    h2 НАШИ ЗАКАЗЧИКИ
+
+    .our-partners__list.our-partners__slider
+      .our-partners__list-container
+        - var n = 1
+          while n < 28
+            +opl-item('img/opl-'+ n++ +'.png')

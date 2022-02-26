@@ -1,0 +1,53 @@
+section.what-included
+  @media (max-width: 1060px)
+    display: none
+
+  .what-inckuded__table
+    margin-top: 70px
+    display: flex
+    flex-wrap: wrap
+    border: 1px solid #000
+    @media (max-width: 1350px)
+      margin-top: 50px
+
+    & > ul li
+      text-align: center
+      border-bottom: 1px solid #000
+      padding: 15px 14px
+      @media (max-width: 1350px)
+        padding: 10px 14px
+
+      &:last-child
+        border: none
+      &.head
+        height: 70px
+        display: flex
+        align-items: center
+        background-color: var(--orange-01)
+        font-weight: 600
+        @media (max-width: 1350px)
+          height: 60px
+
+    &-service
+      width: 55%
+      li
+        text-align: left !important
+    &-min
+      width: 15%
+    &-standart
+      width: 15%
+    &-premium
+      width: 15%
+
+  .what-inckuded__btns
+    margin-top: 64px
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    @media (max-width: 1350px)
+      margin-top: 40px
+
+    & > a
+      width: 13%
+      height: 60px
+      margin-left: 30px

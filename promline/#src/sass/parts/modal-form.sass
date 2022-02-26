@@ -1,0 +1,102 @@
+.modal-form
+  width: 100%
+  height: 100%
+  background: #fff
+  display: flex
+  align-items: center
+  justify-content: center
+  position: fixed
+  left: 0
+  top: 0
+  transition: var(--trans-2s)
+  opacity: 0
+  visibility: hidden
+  z-index: -1
+  &.active
+    opacity: 1
+    visibility: visible
+    z-index: 100
+
+  &::before, &::after
+    @include ba()
+    width: 60%
+    height: 260px
+    background: center / cover no-repeat url('../img/pattern.svg')
+    z-index: -1
+  &::before
+    bottom: 0
+    left: 0
+    transform: rotate(180deg)
+  &::after
+    right: 0
+    top: 0
+
+  .form-container
+    width: 886px
+    padding: 60px 20px
+    background: var(--header-black__hover)
+
+    &__title
+      max-width: 434px
+      margin: 0 auto 34px
+      text-align: center
+      color: #fff
+      font-size: 45px
+      font-weight: 700
+      line-height: 58px
+      letter-spacing: 0.01em
+      text-transform: uppercase
+      position: relative
+      &::before, &::after
+        @include ba()
+        width: 72px
+        height: 6px
+        background: #FFC83C
+        top: calc(50% - 3px)
+      &::before
+        left: -87px
+      &::after
+        right: -87px
+
+    &__done
+      display: none
+      max-width: 432px
+      color: #fff
+      text-align: center
+      line-height: 140%
+      margin: 0 auto
+      &.active
+        display: block
+
+      a
+        display: flex
+        align-items: center
+        justify-content: center
+        margin: 24px auto 0
+
+  form
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    input
+      margin-bottom: 24px
+      padding: 20px 24px
+      display: block
+      width: 290px
+      font-size: 20px
+      line-height: 26px
+      outline: none
+      &::placeholder
+        color: #ACACAC
+
+  .input-div
+    position: relative
+    &.err
+      input
+        transition: var(--trans-2s)
+        background: #FFEDED
+      .alert-message
+        top: -55px
+        opacity: 1
+        visibility: visible

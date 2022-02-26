@@ -1,0 +1,23 @@
+mixin hl-item(img)
+  .hero__list-item.swiper-slide
+    .container
+      h1.yellow-bg Качество
+      div.h1-cont без компромиссов
+
+      .hero-img
+        img(src=img, alt="")
+
+section.hero 
+  .hero__list.hero__list-slider
+    .swiper-wrapper
+      +hl-item('img/hl-1.jpg')
+      +hl-item('img/hl-2.jpg')
+      +hl-item('img/hl-3.jpg')
+    
+    .paginations
+
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+
+    

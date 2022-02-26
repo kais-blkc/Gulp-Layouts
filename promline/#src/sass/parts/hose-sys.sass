@@ -1,0 +1,262 @@
+section.hose-sys
+  position: relative
+
+  .materials__promo__section .section__heading
+    display: none
+
+  h2
+    @media (max-width: 767px)
+      display: none
+  h2.mob
+    display: none
+    @media (max-width: 767px)
+      display: block
+
+  .pattern
+    width: 60%
+    position: absolute
+    right: 0
+    top: 0
+    z-index: -1
+
+  .hose-block
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    @media (max-width: 767px)
+      display: none
+
+  .yellow-lines
+    z-index: 2
+    position: absolute
+    right: 170px
+    top: 320px
+    @media (max-width: 1620px)
+      img
+        max-width: 70%
+
+  .desc
+    max-width: 800px
+
+  .yellow-block
+    max-width: 730px
+    display: block
+    text-align: center
+    margin-top: 60px
+    font-size: 45px
+    @media (max-width: 767px)
+      font-size: 18px
+
+// New styles =============================
+.materials__promo__section
+  padding: 100px 0 150px
+  @media (max-width: 1040px)
+    display: flex
+    flex-direction: column
+
+  .container
+    width: 100%
+    max-width: 1400px
+    margin: 0 auto
+    padding: 0 15px
+
+.materials-promo__container
+  position: relative
+  z-index: 1
+  @media (max-width: 1040px)
+    order: 3
+  @media (max-width: 990px)
+    z-index: -1
+
+.materials__promo__section .section__heading
+  font-size: 45px
+  font-size: 2.8125rem
+  text-transform: uppercase
+  font-weight: 700
+  color: #4C4C4C
+  margin-bottom: 30px
+  @media (max-width: 990px)
+    text-align: center
+  @media (max-width: 535px)
+    font-size: 28px
+
+.materials-promo__inner
+  position: absolute
+  width: 100%
+  height: 650px
+  top: 0
+  left: 0
+  @media (max-width: 1415px)
+    height: 40.625rem
+  @media (max-width: 1040px)
+    height: unset
+    position: initial
+
+.materials-promo-text__item
+  position: absolute
+  text-align: right
+  max-width: 300px
+  @media (max-width: 1040px)
+    position: initial
+    max-width: 100%
+    text-align: left
+    margin-bottom: 25px
+
+.__promo-text__item1
+  top: 0
+  left: 0
+
+.materials-promo-text__item__inner
+  position: relative
+
+.prompt-line__wrapper
+  position: absolute
+  @media (max-width: 1040px)
+    display: none
+
+.prompt-line__wrapper1
+  width: 809px
+  top: 133px
+  right: calc(-100% - 520px)
+  transform: rotate(18deg)
+  transform: rotate(198deg)
+  @media (max-width: 1415px)
+    width: 43.4375rem
+    right: calc(-100% - 25.625rem)
+  @media (max-width: 1185px)
+    width: 41.4375rem
+    right: calc(-100% - 19.625rem)
+    top: 110px
+
+.prompt-line
+  background: #FFC83C
+  height: 2px
+  position: absolute
+  // animation: line_animation
+  animation-duration: 2s
+  animation-iteration-count: 1
+  opacity: 0
+
+.__promo-text__item1 .prompt-line
+  width: 805px
+  width: 100%
+  transform: rotate(180deg)
+
+.prompt-line::before, .prompt-line:after
+  content: ''
+  width: 10px
+  height: 10px
+  border-radius: 50%
+  background: #FFC83C
+  display: block
+  position: absolute
+  top: -4px
+
+.prompt-line.dots::before
+  animation-name: dot_animation
+  animation-duration: 1600ms
+  animation-iteration-count: 1
+  animation-fill-mode: forwards
+
+.prompt-line::before
+  left: 0
+  border: 3px solid #2D2D2D
+  top: -6px
+  opacity: 0
+
+.prompt-line:after
+  right: 0
+  /* border: 3px solid #2D2D2D; */
+
+.__promo-text__item2
+  top: 42%
+  left: 0
+
+.prompt-line__wrapper2
+  width: 655px
+  width: 659px
+  top: 5px
+  right: calc(-100% - 380px)
+  transform: rotate(-2deg)
+  transform: rotate(-182deg)
+  @media (max-width: 1415px)
+    width: 34.6875rem
+    right: calc(-100% - 17.75rem)
+  @media (max-width: 1185px)
+    width: 31.6875rem
+    right: calc(-100% - 10.75rem)
+
+.__promo-text__item2 .prompt-line
+  width: 100%
+  transform: rotate(-180deg)
+
+.__promo-text__item3
+  right: 100px
+  bottom: 0
+
+.prompt-line__wrapper3
+  width: 284px
+  top: -125px
+  right: calc(-100% + 110px)
+  transform: rotate(-80deg)
+  transform: rotate(-261deg)
+
+.__promo-text__item3 .prompt-line
+  width: 100%
+  transform: rotate(-180deg)
+
+.container__large
+  max-width: 1600px
+  padding: 0
+
+.materials__promo__section .container__large
+  @media (max-width: 1040px)
+    order: 2
+  @media (max-width: 535px)
+    padding-left: 15px
+
+.cable-img
+  display: block
+  margin-left: auto
+  max-width: 900px
+  margin-top: 200px
+  margin-top: 12.5rem
+  max-width: 56.25rem
+  @media (max-width: 1040px)
+    margin-top: 0
+    width: 100%
+    max-width: 500px
+    margin-bottom: 20px
+  @media (max-width: 535px)
+    display: none
+
+.cable-img-mobile
+  display: none
+  max-width: 100%
+  margin-bottom: 30px
+  @media (max-width: 535px)
+    display: block
+
+.materials-promo-text__item__inner span
+  color: #2D2D2D
+  font-size: 18px
+  font-weight: 700
+
+.materials-promo-text__item__inner p
+  color: #8F8F8F
+
+@keyframes line_animation
+  0%
+    width: 0px
+    visibility: hidden
+
+  100%
+    width: 100%
+    visibility: visible
+
+@keyframes dot_animation
+  0%
+    opacity: 0
+
+  100%
+    opacity: 1

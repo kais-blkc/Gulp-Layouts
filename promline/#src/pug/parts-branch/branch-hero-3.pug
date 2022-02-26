@@ -1,0 +1,20 @@
+mixin hb-item(img, text)
+  .hero-branch__list-item
+    .hero-branch__item-img
+      img(src=img, alt="")
+    .hero-branch__item-desc=text
+
+section.hero-branch 
+  .container 
+    .breadcrumbs Главная >> решение задач >> #[a(href="javascript:void(0)") горнодобывающая отрасль]
+
+    .h1-title
+      h1 строительная отрасль
+      p Оптимизируем процессы и бюджеты!
+    
+    .hero-branch__list
+      +hb-item('img/hb-3.1.jpg', 'Швинг')
+      +hb-item('img/hb-1.4.jpg', 'Подача  строительных смесей')
+      +hb-item('img/hb-3.3.jpg', 'Дренаж, водоотвод, осушение')
+      +hb-item('img/hb-1.8.jpg', 'Подача питьевой воды')
+      +hb-item('img/hb-3.5.jpg', 'Подача воды для различных технологических нужд')

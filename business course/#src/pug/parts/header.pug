@@ -1,0 +1,58 @@
+header.front-page
+  .container
+    .header-title
+      .bookmark 10
+      .flow Поток 2021 #[span Осталось свободных мест]
+
+    .navbar
+      ul
+        .burger-close#burger-close
+        li.reg#form-reg-btn
+          a(href="#") Регистрация
+
+          .form-reg.form-wrapper#form-reg
+            form.inputs-blue
+              .form-reg-title #[span Регистрация] Пожалуйста заполните все поля ниже:
+
+              label О себе:
+              .reg-about
+                input(type="text" name="reg_name" placeholder="Имя" required)
+                input(type="text" name="reg_middle" placeholder="Отчество" required)
+                input(type="text" name="reg_surname" placeholder="Фамилия" required)
+                input(type="text" name="reg_date-birth" placeholder="Дата рождения" required)
+
+              label Контакты:
+              .reg-contacts
+                input(type="email" name="reg_email" placeholder="E-mail" required)
+                input(type="text" name="reg_number" placeholder="Телефон" required)
+                input(type="text" name="reg_inst" placeholder="Instagram" required)
+
+              label Учетная запись:
+              .reg-contacts
+                input(type="name" name="reg_email" placeholder="Логин" required)
+                input(type="password" name="reg_number" id="reg_password" placeholder="Пароль" required)
+                label(for="remember-me" required).remember-me Запомнить данные
+                  input(type="checkbox" name="reg_remember-me" id="remember-me")
+                input(type="password" name="reg_number" id="reg_password-confirm" placeholder="Повторите пароль" required)
+
+              button.btn-reg.blue Зарегистрироваться
+
+        li.account#form-signIn-btn
+          a(href="my-account.html") Личный кабинет
+
+          .form-signIn.form-wrapper#form-signIn
+            form.inputs-blue
+              div 
+                input(type="text" placeholder="Логин")
+                input(type="password" placeholder="Пароль")
+              div
+                label(for="signin-remember") Запомнить данные
+                  input(type="checkbox" id="signin-remember")
+                button.btn-reg.blue Войти
+          
+        li.user
+          a(href="paid.html") Александр
+        li.cart
+          a(href="cart.html")
+            img(src="img/cart.png", alt="")
+            span (2)

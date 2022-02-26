@@ -1,0 +1,60 @@
+section.prices
+  .container
+    .prices-title Успей присоединиться к потоку
+    .timer-wrapper
+      .timer.bold-light ДО старта потока #[span#timer 00:00:00]
+
+    .tariffs-list
+      .tariffs-list-item
+        .tariffs-list-item-header
+          img(src="img/traffic-header-1.png", alt="")
+        .tariffs-list-item-body 
+          .tariff.bold-light свободный #[span (ВСЕ МАТЕРИАЛЫ В ЗАПИСИ)]
+          .price 1.990 р
+
+          .more-list
+            .more-list-item
+              input(type="radio" id="tariff1-more-teacher" name="tariff")
+              label(for="tariff1-more-teacher") c куратором +1000р
+            .more-list-item
+              input(type="radio" id="tariff1-more-yourself" name="tariff")
+              label(for="tariff1-more-yourself") самостоятельно +0р
+              
+        button.add-to-card
+        .arrow-bottom
+    
+      .tariffs-list-item
+        .tariffs-list-item-header
+          img(src="img/traffic-header-2.png", alt="")
+        .tariffs-list-item-body 
+          .tariff.bold-light Live #[span (ПРЯМЫ ЭФИРЫ)]
+          .price 4.990 р
+
+          .more-list
+            .more-list-item
+              input(type="radio" id="tariff2-more-teacher" name="tariff")
+              label(for="tariff2-more-teacher") c куратором +1000р
+            .more-list-item
+              input(type="radio" id="tariff2-more-yourself" name="tariff")
+              label(for="tariff2-more-yourself") самостоятельно +0р
+              
+        button.add-to-card
+        .arrow-bottom
+    
+      .tariffs-list-item
+        .tariffs-list-item-header
+          img(src="img/traffic-header-3.png", alt="")
+        .tariffs-list-item-body 
+          .tariff.bold-light Вип #[span (личный наставник)]
+          .price 49.990 р
+
+          .more-list
+            .more-list-item
+              input(type="radio" id="tariff3-more_teacher" name="tariff")
+              label(for="tariff3-more_teacher") Иван Бакуров
+            .more-list-item
+              input(type="radio" id="tariff3-more-yourself" name="tariff")
+              label(for="tariff3-more-yourself") Илья кусакин
+              
+        button.add-to-card
+        .arrow-bottom

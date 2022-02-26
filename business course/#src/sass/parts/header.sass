@@ -1,0 +1,294 @@
+
+header.front-page
+  position: relative
+  z-index: 2
+
+  .container
+    padding-top: 15px
+    position: relative
+    display: flex
+    justify-content: flex-end
+
+  .header-title
+    position: absolute
+    left: 0
+    top: 0
+    display: flex
+    align-items: flex-end
+    justify-content: space-between
+    color: var(--white)
+    .bookmark
+      display: flex
+      align-items: flex-end
+      justify-content: center
+      font-size: 5em
+      font-weight: 700
+      width: 140px
+      height: 120px
+      color: var(--white)
+      background-color: var(--blue)
+      border-radius: 0 0 30px 30px
+      @media (max-width: 768px)
+        width: 120px
+        height: 100px
+
+    .flow
+      margin-bottom: 20px
+      margin-left: 24px
+      font-weight: 300
+      font-size: 32px
+      max-width: 200px
+      span
+        font-size: 16px
+        display: block
+      @media (max-width: 1060px)
+        max-width: 100%
+      @media (max-width: 550px)
+        margin-left: 14px
+      @media (max-width: 340px)
+        font-size: 22px
+        span
+          font-size: 12px
+
+  .navbar
+    &.active
+      position: fixed
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background: rgba(0,0,0, .7)
+      ul
+        right: 0
+    ul
+      padding: 0
+      list-style: none
+      margin-left: auto
+      display: flex
+      align-items: flex-end
+      @media (max-width: 1060px)
+        width: 300px
+        height: 100%
+        padding: 90px 0 0 10px
+        flex-direction: column
+        align-items: flex-start
+        background: var(--white)
+        position: fixed
+        right: -320px
+        top: 0
+        z-index: 5
+        transition: all .3s ease
+        .burger-close
+          display: flex
+
+      .burger-close
+        display: none
+        align-items: center
+        width: 45px
+        height: 45px
+        position: absolute
+        right: 30px
+        top: 30px
+        &::before, &::after
+          @include ba()
+          width: 100%
+          height: 6px
+          border-radius: 3px
+          background-color: var(--blue)
+        &::before
+          transform: rotate(45deg)
+        &::after
+          transform: rotate(-45deg)
+      li
+        margin-left: 24px
+        position: relative
+        @media (max-width: 1060px)
+          margin-bottom: 15px
+
+        &.reg
+          margin-right: 14px
+          @media (max-width: 1240px)
+            margin-right: 35px
+          a
+            color: var(--white)
+        &.account
+          display: flex
+          align-items: flex-end
+          font-weight: 300
+          @media (max-width: 1060px)
+            flex-direction: row-reverse
+            &::before
+              margin-left: 10px
+
+          &::before
+            @include ba()
+            margin-right: 10px
+            position: relative
+            width: 20px
+            height: 20px
+            background: center / contain no-repeat url('../img/user.png')
+          a
+            color: var(--blue)
+        &.user
+          font-weight: 700
+        &.cart
+          @media (max-width: 1060px)
+            &::before
+              display: block
+          &::before
+            content: 'Корзина'
+            margin-right: 10px
+            font-size: 18px
+            display: none
+
+          img
+            width: 20px
+            height: 20px
+
+        a
+          text-decoration: none
+          color: #333
+          @media (max-width: 1060px)
+            color: #333 !important
+            font-size: 18px
+            font-weight: 400
+
+  .btn-reg.blue
+    margin: 25px auto 0
+    width: 325px
+    height: 45px
+    color: #fff
+    font-size: 16px
+    border: 2px solid transparent
+    background-color: var(--blue)
+    &:hover
+      background-color: var(--blue-middle)
+    @media (max-width: 1060px)
+      width: 100%
+
+  .form-reg, .form-signIn
+    &.active
+      @media (max-width: 1060px)
+        position: fixed
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+        background: #00000099
+        overflow-y: auto
+        z-index: 10
+        form
+          padding: 20px
+          position: relative
+          top: 0
+          left: 0
+          &::before
+            display: none
+      @media (max-width: 768px)
+        align-items: flex-start
+        padding: 50px 0
+        form
+          width: 80%
+          & > div
+            flex-direction: column
+          input
+            width: 100%
+      form
+        top: 50px
+        opacity: 1
+        visibility: visible
+    form
+      padding: 45px
+      width: 550px
+      color: var(--blue-middle)
+      border-radius: 30px
+      background: var(--white)
+      box-shadow: var(--shadow-white)
+      border: 1px solid var(--border-color)
+      transition: all .3s ease
+      position: absolute
+      left: 0
+      top: 0
+      visibility: hidden
+      opacity: 0
+      &::before
+        @include ba()
+        top: -16px
+        left: 50px
+        width: 30px
+        height: 30px
+        transform: rotate(45deg)
+        background: var(--white)
+        box-shadow: var(--shadow-white)
+        border-top: 1px solid var(--border-color)
+        border-left: 1px solid var(--border-color)
+
+      .form-reg-title
+        display: block
+        font-size: 14px
+        margin-bottom: 35px
+        span
+          font-size: 16px
+          margin-right: 15px
+          font-weight: 700
+      & > div
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+      label
+        margin-left: 15px
+        margin-bottom: 15px
+        display: inline-block
+        &.remember-me
+          margin: 0
+          display: flex
+          align-items: center
+          flex-direction: row-reverse
+          font-size: 12px
+          @media (max-width: 768px)
+            order: 1
+          input
+            width: 20px
+            margin: 0 10px
+      input
+        width: 48%
+        height: 35px
+
+  .form-signIn
+    form
+      padding: 25px
+      left: calc(50% - 300px)
+      &::before
+        left: 280px
+
+      & > div
+        align-items: center
+
+      label
+        width: 48%
+        display: flex
+        flex-direction: row-reverse
+        justify-content: flex-end
+        margin: 0
+        @media (max-width: 768px)
+          width: 100%
+        input#signin-remember
+          display: inline-block
+          width: 20px
+          height: 20px
+          margin-right: 10px
+          margin-bottom: 0
+          @media (max-width: 768px)
+            width: 20px
+            height: 20px
+      .btn-reg.blue
+        width: 120px
+        margin-right: 0
+        margin-top: 0
+        margin-left: auto
+        @media (max-width: 768px)
+          width: 100%
+          margin-top: 15px

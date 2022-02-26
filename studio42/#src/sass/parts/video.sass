@@ -1,0 +1,46 @@
+section.video
+
+  .container
+    position: relative
+
+  .video__wrapper
+    height: 600px
+    border-radius: 20px
+    background: center / cover no-repeat url('../img/video-bg.jpg') rgba(0,0,0,.7)
+    overflow: hidden
+    // z-index: 2
+    @media (max-width: 1350px)
+      height: 450px
+    @media (max-width: 1060px)
+      height: 350px
+    @media (max-width: 769px)
+      height: 165px
+
+    .btn-play
+      position: absolute
+      left: calc(50% - 45px)
+      top: calc(50% - 45px)
+      width: 90px
+      height: 90px
+      background: center / contain no-repeat url('../img/play.svg')
+      cursor: pointer
+      z-index: 1
+
+    iframe
+      width: 100%
+      height: 100%
+      z-index: 5
+
+  .video__desc
+    color: #fff
+    opacity: .9
+    position: absolute
+    left: 32px
+    top: 25px
+    z-index: 5
+    @media (max-width: 769px)
+      margin-top: 16px
+      color: #000
+      position: relative
+      left: 0
+      top: 0

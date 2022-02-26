@@ -1,0 +1,117 @@
+*, *::before, *::after
+  margin: 0
+  box-sizing: border-box
+
+body
+  font-family: 'Montserrat', Arial, sans-serif
+  /* vars */
+  --white: #fff
+  --blue: #1b3a54
+  --blue-light: #769dd0
+  --blue-middle: #2a6394
+  --border-color: #c4c4c4
+  --gray-light: #c9c9c9
+  --shadow-white: 0 0 15px 0 #fff
+  &.active
+    overflow-y: hidden
+
+.container
+  width: 1025px
+  margin: 0 auto
+  // border: 1px solid orange
+  @media (max-width: 1060px)
+    width: 90%
+
+section
+  padding: 50px 0
+
+button
+  border: none
+  cursor: pointer
+  background: transparent
+
+.t-white
+  color: var(--white)
+
+.t-dark
+  color: var(--blue)
+
+.bold-light
+  font-weight: 700
+  span
+    font-weight: 300
+
+.light-medium
+  font-weight: 300
+  span
+    font-weight: 500
+
+.zero
+  display: inline-block
+  font-size: 1.4em
+
+.btn-reg
+  margin-top: 30px
+  width: 390px
+  height: 65px
+  display: flex
+  align-items: center
+  justify-content: center
+  font-size: 26px
+  color: var(--blue)
+  font-weight: 700
+  border-radius: 30px
+  text-decoration: none
+  background-color: var(--white)
+  box-shadow: 0 0 15px 0px #ffffff
+  transition: all .2s ease
+  &:hover
+    box-shadow: 0 0 25px 3px #fff
+  @media (max-width: 769px)
+    width: 280px
+    font-size: 18px
+
+.check
+  width: 20px
+  height: 35px
+  margin: 2px auto 0
+  border: solid var(--blue-middle)
+  border-width: 0 5px 5px 0
+  transform: rotate(45deg)
+  display: none
+
+.inputs-blue
+  input
+    margin-bottom: 20px
+    padding: 0 15px
+    height: 50px
+    border-radius: 12px
+    border: 1px solid var(--blue-middle)
+    color: var(--blue-middle)
+    outline: none
+    &::placeholder
+      color: var(--placeholder-color)
+
+.plhldr-span
+  position: relative
+  padding-bottom: 14px
+  span
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    font-size: 14px
+    font-weight: 300
+    color: var(--gray-light)
+
+.cart-product-item
+  margin-bottom: 10px
+  font-size: 18px
+  padding: 15px 25px
+  display: flex
+  align-items: center
+  justify-content: space-between
+  border-radius: 10px
+  border: 1px solid var(--blue-middle)
+  span
+    font-weight: 500

@@ -1,0 +1,17 @@
+mixin hb-item(img, text)
+  .hero-branch__list-item
+    .hero-branch__item-img
+      img(src=img, alt="")
+    .hero-branch__item-desc=text
+
+section.hero-branch 
+  .container 
+    .breadcrumbs Главная >> решение задач >> #[a(href="javascript:void(0)") горнодобывающая отрасль]
+
+    .h1-title.red-line
+      h1 судоходная отрасль
+      p Мобильность, легкость, качество!
+    
+    .hero-branch__list
+      +hb-item('img/hb-6.1.jpg', 'Прием и передача между судном и берегом воды, нефти, нефтепродуктов, химических грузов, загрязненных вод')
+      +hb-item('img/hb-6.2.jpg', 'Прием и передача между судами (в т. ч. на ходу) воды, нефти, нефтепродуктов, химических грузов, загрязненных вод')

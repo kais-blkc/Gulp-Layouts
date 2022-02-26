@@ -1,0 +1,12 @@
+mixin cl-item(count, text)
+  .counts__list-item
+    .count=count
+    .text=text
+
+section.counts 
+  .counts__list
+    .container
+      +cl-item('13', 'Лет на рынке')
+      +cl-item('500', 'Довольных заказчиков')
+      +cl-item('5', 'Лет гарантия')
+      +cl-item('205 000м', 'Шланговых систем PROMLINE эксплуатируется на данный момент')
