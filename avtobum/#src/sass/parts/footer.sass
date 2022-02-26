@@ -1,0 +1,142 @@
+footer
+  padding-top: 30px
+  position: relative
+  background: var(--footer-bg)
+  color: #fff
+  overflow: hidden
+
+  h3
+    text-align: center
+    color: var(--black)
+
+  .desc-text
+    font-size: 18px
+    font-weight: 300
+    line-height: 140%
+    color: rgba(255,255,255, .5)
+
+  .autobum-form
+    padding: 70px 40px
+    max-width: 615px
+    box-shadow: 0px 0px 28px rgba(180, 157, 117, 0.1)
+    position: absolute
+    right: 120px
+    top: -1px
+    @media (max-width: 1100px)
+      max-width: 580px
+      right: 20px
+    @media (max-width: 996px)
+      padding: 40px 20px
+      position: relative
+      max-width: 100%
+      margin: 0 auto 50px
+      right: 0
+    @media (max-width: 480px)
+      &::before
+        display: block
+
+    &::before
+      content: ''
+      display: none
+      width: 110%
+      height: 100%
+      background: #fff
+      position: absolute
+      left: -5%
+      top: 0
+      z-index: -1
+
+    .conf-check
+      input,
+      label
+        display: none
+      p
+        font-size: 12px
+
+    button
+      width: 245px
+
+  .footer-map
+    margin-bottom: 40px
+    height: 400px
+    overflow: hidden
+    @media (max-width: 996px)
+      height: 320px
+
+  .footer-top
+    width: 40%
+    margin-bottom: 50px
+    @media (max-width: 996px)
+      width: 100%
+
+  .mob-info
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    text-align: left
+
+    & > div
+      margin: 0 10px
+      margin-bottom: 30px
+
+    &__title
+      color: rgba(255,255,255,.5)
+    &__phone, p
+      color: #fff
+
+  .footer-bottom
+    padding: 30px 0
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    justify-content: space-between
+    position: relative
+    font-size: 16px
+    &::before
+      content: ''
+      width: 120%
+      height: 1px
+      background: rgba(255,255,255, .3)
+      position: absolute
+      left: -10%
+      top: 0
+
+    p, a
+      color: rgba(255,255,255, .5)
+    a
+      text-decoration: underline
+
+    & > div
+      margin: 0 10px
+      @media (max-width: 996px)
+        margin-bottom: 20px
+
+    .development
+      display: flex
+      align-items: center
+      font-size: 14px
+      img
+        display: block
+        margin-right: 10px
+
+.fixed-buttons
+  width: 100%
+  position: fixed
+  bottom: 50px
+  left: 0
+  z-index: 15
+  .container
+    display: flex
+    justify-content: space-between
+
+  a, button
+    display: block
+    width: 100px
+    height: 100px
+    border-radius: 50%
+    border: none
+    cursor: pointer
+    box-shadow: 0px 0px 28px rgba(73, 67, 54, 0.15)
+    @media (max-width: 996px)
+      width: 50px
+      height: 50px

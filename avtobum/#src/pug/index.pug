@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title AutoBum
+    link(rel="stylesheet", href="./css/style.min.css")
+    link(rel="stylesheet", href="./css/swiper-bundle.min.css")
+  body
+    include parts/header
+
+    main
+      <!-- Hero ================= -->
+      include parts/hero
+      <!-- Counts ================= -->
+      include parts/counts
+      <!-- Parts-cat ================= -->
+      include parts/parts-cat
+      <!-- About ================= -->
+      include parts/about
+      <!-- Cost-form ================= -->
+      include parts/cost-form
+      <!-- Brands ================= -->
+      include parts/brands
+      <!-- Reviews ================= -->
+      include parts/reviews
+      <!-- QA ================= -->
+      include parts/qa
+
+    <!-- Footer ================= -->
+    include parts/footer
+
+
+    script(src="./js/swiper-bundle.min.js")
+    script(src="./js/main.js")

@@ -1,0 +1,25 @@
+section.cost-form
+  .container 
+    .cost-form__wrapper
+
+      .cost-form__wrapper-left
+        img(src="img/cfi.png", alt="")
+        
+      .cost-form__wrapper-right.autobum-form
+        h2 Хотите узнать стоимость запчасти?
+        p.autobum-form__desc Заполните форму и отправьте её, мы просчитаем #[br] стоимость и свяжемся с вами!
+
+        form
+          .autobum-form__row
+            input(type="text" name="your-vin" placeholder="Укажите VIN")
+            input(type="text" name="your-marka" placeholder="Марка вашего авто")
+          .autobum-form__row
+            input(type="text" name="your-name" placeholder="Ваше имя *")
+            input(type="text" name="your-phone" placeholder="+7 (999) 999-99-99 *")
+          textarea(name="message" placeholder="Какая запчасть вас интересует?")
+          .autobum-form__conf
+            .conf-check
+              input(type="checkbox" name="conf" id="conf")
+              label(for="conf") &#10004;
+              p Нажимая кнопку, вы принимаете условия #[a(href="#") политики конфиденциальности] 
+            button(type="button" data-text="Узнать стоимость").orange-btn 

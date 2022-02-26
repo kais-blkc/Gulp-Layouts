@@ -1,0 +1,57 @@
+section.counts
+  box-shadow: var(--box-shadow-btn)
+  box-shadow: 0px 4px 28px rgba(180, 157, 117, 0.1)
+  .counts-list
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    padding: 50px 0
+
+    .counts-list__item
+      padding-left: 20px
+      @media (max-width: 996px)
+        width: 45%
+        margin-bottom: 40px
+      @media (max-width: 440px)
+        width: 100%
+        margin-bottom: 30px
+        margin-left: 20px
+
+      .counts-item__title
+        font-weight: bold
+        font-size: 54px
+        line-height: 140%
+        position: relative
+        @media (max-width: 1100px)
+          font-size: 42px
+        @media (max-width: 480px)
+          &::before
+            left: -15px
+
+        &:hover
+          &::before
+            left: -10px
+
+        &::before
+          content: ''
+          display: block
+          width: 1px
+          height: 100%
+          background: var(--orange-accent)
+          transform: rotate(21deg)
+          position: absolute
+          left: -20px
+          top: 0
+          transition: var(--trans-2s)
+
+      .counts-item__desc
+        font-weight: 300
+        font-size: 18px
+        line-height: 140%
+        color: rgba(24, 16, 0, 0.5)
+        @media (max-width: 1100px)
+          font-size: 16px
+        @media (max-width: 480px)
+          font-size: 14px
+        @media (max-width: 440px)
+          font-size: 16px

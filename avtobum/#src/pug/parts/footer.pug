@@ -1,0 +1,57 @@
+.fixed-buttons 
+  .container 
+    button.fxd-btn#top-btn
+      img(src="img/top.svg", alt="") 
+    a(href="tel:+74852390265").fxd-btn
+      img(src="img/phone.svg", alt="") 
+
+footer 
+  .footer-map
+    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab6837bc5f4570f68870c28fbbb795801fbbb670b52d3805b5c873219725c6c15&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+
+  
+  .container 
+    .footer-top
+      h2 Контакты
+      .desc-text Чтобы уточнить по наличии и стоимости автозапчсти, звоните по телефону, либо оставляйте заявку для связи по форме
+
+    .autobum-form
+      h3 Узнать стоимость запчасти
+
+      form
+        .autobum-form__row
+          input(type="text" name="your-vin" placeholder="Укажите VIN")
+          input(type="text" name="your-marka" placeholder="Марка вашего авто")
+        .autobum-form__row
+          input(type="text" name="your-name" placeholder="Ваше имя *")
+          input(type="text" name="your-phone" placeholder="+7 (999) 999-99-99 *")
+        textarea(name="message" placeholder="Какая запчасть вас интересует?")
+        .autobum-form__conf
+          .conf-check
+            input(type="checkbox" name="conf" id="conf")
+            label(for="conf") &#10004;
+            p Нажимая кнопку, вы принимаете условия #[a(href="#") политики конфиденциальности] 
+          button(type="button" data-text="Узнать стоимость").orange-btn 
+
+    .footer-center.mob-info
+      div
+        .mob-info__title Телефон
+        a(href="tel:+74852390265").mob-info__phone +7 (4852) 39-02-65
+        a(href="mailto:info@avtobum.com").mob-info__email info@avtobum.com
+      div
+        .mob-info__title Время работы
+        p ПН-ПТ с 9:00 до 19:00
+        p СБ с 10:00 до 17:00
+      div
+        .mob-info__title Адрес
+        p г. Ярославль, ул. Чехова, 30/16
+
+    .footer-bottom
+      div
+        p © 2022. Все права защищены. 
+      div
+        a(href="#") Политика конфиденциальности
+      .development
+        img(src="img/pr-maker.svg", alt="")
+        p Разработка #[br] и продвижение сайтов
+

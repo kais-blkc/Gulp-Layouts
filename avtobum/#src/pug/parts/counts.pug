@@ -1,0 +1,12 @@
+mixin c-i(title, desc)
+  .counts-list__item
+    .counts-item__title!=title
+    .counts-item__desc!=desc
+
+section.counts
+  .container 
+    .counts-list
+      +c-i('10 тыс.', 'Видов автозапчастей')
+      +c-i('550', 'Городов обслуживаем')
+      +c-i('5000', 'Наименований продукции')
+      +c-i('670', 'Постоянных клиентов')  

@@ -1,0 +1,24 @@
+mixin pl-i(img, title, desc)
+  .parts-cat__list-item
+    .parts-cat__item-img
+      img(src=img, alt="")
+    .parts-cat__item-title!=title
+    .parts-cat__item-desc!=desc
+
+section.parts-cat#parts-cat
+
+  .wheel
+    img(src="img/p-wheel.png", alt="")
+
+  .container
+    .parts-cat__list
+      .parts-cat__list-item.first
+        .parts-cat__item-title Каталог запчастей
+        .parts-cat__item-desc Продукция автозапчасти для иномарок и отечественных автомобилей
+        a(href="#" data-text="Узнать цену").orange-btn 
+
+      +pl-i('img/pl-1.png', ' Запчасти для ТО', 'Подвески, тормозной системы, топливной системы и др.')
+      +pl-i('img/pl-2.png', 'Автохимия', 'Очистители для авто. дезинфекция транспортного средства')
+      +pl-i('img/pl-3.png', 'Автомасла', 'Автомасла различных брендов в наличии и под заказ')
+      +pl-i('img/pl-4.png', 'Кузовные запчасти', 'Бампер, крыло, капот, дверь, крышка, багажник и др.')
+      +pl-i('img/pl-5.png', 'Автоаксессуары', 'Автомагнитолы, колонки, FM тюнеры и др.')

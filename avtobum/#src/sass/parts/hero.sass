@@ -1,0 +1,73 @@
+section.hero
+  padding: 180px 0 80px
+  position: relative
+  overflow: hidden
+  z-index: 1
+  @media (max-width: 767px)
+    padding: 160px 0 70px
+  &::before
+    content: ''
+    display: block
+    width: 460px
+    height: 110%
+    transform: skew(-388deg, 0)
+    background: var(--orange-opacity)
+    position: absolute
+    right: 120px
+    top: 0
+    z-index: -1
+    @media (min-width: 1920px)
+      right: 620px
+    @media (max-width: 1220px)
+      right: 10px
+    @media (max-width: 767px)
+      right: 110px
+    @media (max-width: 480px)
+      right: -90px
+    @media (max-width: 360px)
+      right: -230px
+
+  .hero-img
+    position: absolute
+    top: 110px
+    right: -80px
+    @media (min-width: 1440px)
+      right: 0%
+    @media (min-width: 1920px)
+      right: 20%
+    @media (max-width: 1220px)
+      right: -200px
+      width: 580px
+    @media (max-width: 996px)
+      margin: 0 auto
+      position: relative
+      right: 0
+      top: 0
+      width: 110%
+
+  h1
+    max-width: 600px
+    font-weight: bold
+    font-size: 58px
+    line-height: 120%
+    margin-bottom: 30px
+    @media (max-width: 1100px)
+      font-size: 58px
+    @media (max-width: 996px)
+      font-size: 55px
+    @media (max-width: 480px)
+      font-size: 44px
+      margin-bottom: 20px
+
+  p
+    max-width: 600px
+    font-weight: 300
+    font-size: 22px
+    line-height: 140%
+    color: rgba(24, 16, 0, 0.7)
+    margin-bottom: 50px
+    @media (max-width: 480px)
+      font-size: 20px
+      margin-bottom: 40px
+      br
+        display: none

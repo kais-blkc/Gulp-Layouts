@@ -1,0 +1,161 @@
+section.about
+  position: relative
+  background: #FAFAFA
+  padding-bottom: 100px
+  @media (max-width: 996px)
+    padding: 0 0 30px
+
+  .before-img
+    position: absolute
+    top: -150px
+    left: 0
+    z-index: 5
+    @media (max-width: 480px)
+      display: none
+  .after-img
+    position: absolute
+    bottom: 20px
+    left: 0
+    z-index: 5
+    @media (max-width: 1100px)
+      bottom: 300px
+      left: -80px
+    @media (max-width: 480px)
+      bottom: auto
+      top: 360px
+      left: -110px
+    @media (max-width: 360px)
+      display: none
+
+  .about-img
+    width: 50%
+    height: 550px
+    position: absolute
+    right: 0
+    top: 0
+    z-index: 7
+    @media (max-width: 767px)
+      width: 100%
+      height: 440px
+    @media (max-width: 480px)
+      height: 370px
+    @media (max-width: 360px)
+      height: 260px
+
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+
+  h2
+    z-index: 7
+    @media (max-width: 767px)
+      margin-bottom: 30px
+
+  .about-wrapper
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    @media (max-width: 767px)
+      flex-direction: column
+      justify-content: flex-start
+
+    .about-wrapper__left
+      width: 45%
+      display: flex
+      flex-direction: column
+      justify-content: center
+      @media (max-width: 767px)
+        width: 100%
+        order: 2
+      p
+        margin-bottom: 25px
+        font-weight: 300
+        font-size: 22px
+        line-height: 140%
+        color: var(--desc-color)
+        z-index: 7
+        @media (max-width: 1100px)
+          font-size: 18px
+        @media (max-width: 360px)
+          font-size: 16px
+
+    .about-wrapper__right
+      width: 50%
+      height: 550px
+      position: relative
+      @media (max-width: 767px)
+        margin-bottom: 50px
+        width: 100%
+        height: 440px
+        order: 1
+      @media (max-width: 480px)
+        height: 370px
+      @media (max-width: 360px)
+        height: 260px
+
+      .about-delivery
+        width: 170px
+        height: 90px
+        background: center / contain no-repeat url('../img/a-delivery.svg')
+        position: absolute
+        bottom: 14px
+        left: -58px
+        z-index: 8
+        @media (max-width: 767px)
+          left: auto
+          right: 5px
+          bottom: -26px
+        @media (max-width: 480px)
+          width: 130px
+          height: 84px
+
+  .about-list
+    margin-top: 50px
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+
+    &__item
+      width: 23%
+      z-index: 6
+      @media (max-width: 1100px)
+        width: 48%
+        margin-bottom: 40px
+        br
+          display: none
+      @media (max-width: 360px)
+        width: 100%
+        display: flex
+        align-items: center
+
+      &:hover
+        .about-item__img
+          box-shadow: 0px 0px 28px rgba(180, 157, 117, 0.6)
+
+      .about-item__img
+        padding: 15px
+        margin-bottom: 20px
+        width: 100px
+        height: 100px
+        background: #fff
+        display: flex
+        align-items: center
+        justify-content: center
+        box-shadow: 0px 0px 28px rgba(180, 157, 117, 0.1)
+        transition: all .5s ease
+        @media (max-width: 480px)
+          width: 70px
+          height: 70px
+        @media (max-width: 360px)
+          padding: 9px
+          margin-bottom: 0
+          margin-right: 10px
+          min-width: 60px
+          min-height: 60px
+
+      .about-item__desc
+        font-size: 22px
+        line-height: 140%
+        @media (max-width: 480px)
+          font-size: 18px

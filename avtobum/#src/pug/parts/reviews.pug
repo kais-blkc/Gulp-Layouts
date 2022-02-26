@@ -1,0 +1,24 @@
+mixin rs-i(icon, text, photo, name)
+  .swiper-slide
+    .reviews-item
+      .reviews-item__icon
+        img(src=icon, alt="")
+      .reviews-item__text!=text
+      .reviews-item__client
+        .reviews-item__client-photo
+          img(src=photo, alt="")
+        .reviews-item__client-name!=name
+
+section.reviews#reviews
+  .container 
+    h2 Отзывы постоянников #[br] о магазине Автобум
+
+    .reviews-slider
+      .swiper-wrapper
+        +rs-i('img/rs-icon-1.svg', 'Старый, добрый магазин автозапчастей, почти «ламповый», что-то сть, чего-то нет, но магазин здесь очень давно, как мне кажется', 'img/user.png', 'Лилилайнен <br> Люблин')
+        +rs-i('img/rs-icon-2.svg', 'Очень хороший магазин запчастей, работаю с ними уже давно, всегда все быстро привозят, цены не заоблачные как у некоторых', 'img/rsi-2.png', 'Василий <br> Люблин')
+        +rs-i('img/rs-icon-1.svg', 'Толковый продавец. С ходу понимают что мне надо. Цена и качество сходятся. И могут поговорить пот душам.', 'img/rsi-3.png', 'Лилилайнен <br> Оннатоннен')
+        +rs-i('img/rs-icon-2.svg', 'Хорошее, доброе, человеческое отношение к делу и людям! Рекомендую', 'img/user.png', 'Андрей <br> Гатилов')
+        +rs-i('img/rs-icon-1.svg', 'Хороший магазин. Все всегда есть. Постоянно только здесь и покупаю', 'img/user.png', 'Антон <br> Иванов')
+
+      .swiper-scrollbar

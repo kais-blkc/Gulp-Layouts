@@ -1,0 +1,28 @@
+mixin al-i(img, desc)
+  .about-list__item
+    .about-item__img
+      img(src=img, alt="")
+    .about-item__desc!=desc
+
+section.about#about
+  .container 
+    .about-wrapper
+      .before-img
+        img(src="img/a-before.png", alt="")
+      .after-img
+        img(src="img/p-wheel.png", alt="")
+
+      .about-img
+        img(src="img/a-img.jpg", alt="")
+      .about-wrapper__left
+        h2 О магазине Автобум
+        p Широкий ассортимент оригинальных, новых и контрактных автозапчастей для отечественных авто и иномарок в наличии и под заказ. 
+        p Мы ценим и уважаем наших клиентов, поэтому в нашем магазине вас всегда ждёт качественное обслуживание квалифицированными специалистами и действительно доступные низкие цены.
+      .about-wrapper__right
+        .about-delivery
+
+    .about-list
+      +al-i('img/ali-1.svg', 'Большой ассортимент <br> расходных материалов')
+      +al-i('img/ali-2.svg', 'Оригинальные <br> и дубликатные запчасти')
+      +al-i('img/ali-3.svg', 'Редкие запасные части <br> в наличии и под заказ')
+      +al-i('img/ali-4.svg', 'Помощь в поиске <br> контрактных запчастей')
